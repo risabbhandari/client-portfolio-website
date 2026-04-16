@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { NitroProjectCard } from "@/components/projects/nitro-project-card";
+import { ProjectStackScene } from "@/components/projects/project-stack-scene";
 import { Reveal } from "@/components/ui/reveal";
 import { projectCategories } from "@/data/site";
 
@@ -35,7 +36,7 @@ export default function ProjectsPage() {
           <span className="eyebrow">.clients</span>
         </Reveal>
 
-        <div className="mt-10 space-y-7">
+        <div className="mt-10 space-y-7 lg:hidden">
           {projectCategories.map((item, index) => (
             <Reveal
               amount={0.16}
@@ -46,6 +47,10 @@ export default function ProjectsPage() {
               <NitroProjectCard index={index} item={item} />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-12 hidden lg:block">
+          <ProjectStackScene items={projectCategories} leadIn={0.06} mode="home" />
         </div>
       </div>
 

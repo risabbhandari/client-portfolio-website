@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { NitroProjectCard } from "@/components/projects/nitro-project-card";
+import { ProjectStackScene } from "@/components/projects/project-stack-scene";
 import { Reveal } from "@/components/ui/reveal";
 import {
   aboutPhilosophy,
@@ -94,37 +95,44 @@ export function HomeStackedShowcase() {
       </section>
 
       <section className="layout-shell hidden pt-12 lg:block">
-        <div className="relative isolate">
-          <div className="sticky top-[7.25rem] z-0 min-h-[calc(100svh-7.25rem)]">
+        <ProjectStackScene
+          items={projectPreview}
+          entryOffset={1220}
+          leadIn={0.28}
+          mode="home"
+          sceneHeightPerItem={146}
+          overlay={
             <div className="flex min-h-[calc(100svh-7.25rem)] flex-col justify-between pt-8">
-              <Reveal amount={0.3} distance={32}>
-                <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-                  <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-                  <span className="rounded-full border border-white/10 px-3 py-1 text-[0.72rem] uppercase tracking-[0.26em] text-[#a9c2d8]">
-                    available for new projects
-                  </span>
-                </div>
-              </Reveal>
+              <div>
+                <Reveal amount={0.3} distance={32}>
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
+                    <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
+                    <span className="rounded-full border border-white/10 px-3 py-1 text-[0.72rem] uppercase tracking-[0.26em] text-[#a9c2d8]">
+                      available for new projects
+                    </span>
+                  </div>
+                </Reveal>
 
-              <Reveal delay={0.06} amount={0.3} distance={40}>
-                <div className="mt-10 max-w-6xl space-y-3">
-                  <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#7da0ca]">
-                    creative portfolio
-                  </p>
-                  <h1 className="max-w-6xl text-balance font-serif text-[6.15rem] leading-[0.9] text-mist xl:text-[7.35rem]">
-                    {heroLines[0]}
-                  </h1>
-                  <p className="font-serif text-[5.25rem] leading-[0.92] text-[#dfe9f4] xl:text-[6.1rem]">
-                    {heroLines[1]}
-                  </p>
-                  <p className="font-serif text-[5.25rem] leading-[0.92] text-[#9eb9d4] xl:text-[6.1rem]">
-                    {heroLines[2]}
-                  </p>
-                </div>
-              </Reveal>
+                <Reveal delay={0.06} amount={0.3} distance={40}>
+                  <div className="mt-10 max-w-6xl space-y-3">
+                    <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#7da0ca]">
+                      creative portfolio
+                    </p>
+                    <h1 className="max-w-6xl text-balance font-serif text-[5.7rem] leading-[0.9] text-mist xl:text-[6.8rem]">
+                      {heroLines[0]}
+                    </h1>
+                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#dfe9f4] xl:text-[5.55rem]">
+                      {heroLines[1]}
+                    </p>
+                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#9eb9d4] xl:text-[5.55rem]">
+                      {heroLines[2]}
+                    </p>
+                  </div>
+                </Reveal>
+              </div>
 
               <Reveal delay={0.12} amount={0.28} distance={32}>
-                <div className="mt-14 grid gap-10 lg:grid-cols-[0.62fr_0.38fr] lg:items-end">
+                <div className="grid gap-10 lg:grid-cols-[0.62fr_0.38fr] lg:items-end">
                   <p className="max-w-2xl text-lg leading-8 text-[#b8cade]">
                     Amelie creates short-form edits, narrative films, sound-led
                     storytelling, and polished visual assets with a calm,
@@ -139,27 +147,8 @@ export function HomeStackedShowcase() {
                 </div>
               </Reveal>
             </div>
-          </div>
-
-          <div className="relative z-[30] mt-[74vh]">
-            {projectPreview.map((item, index) => (
-              <div
-                className={`${index === 0 ? "mt-0" : "-mt-[84vh]"} relative min-h-[196vh]`}
-                key={item.title}
-              >
-                <div
-                  className="sticky"
-                  style={{
-                    top: `calc(7.15rem + ${index * 0.95}rem)`,
-                    zIndex: 20 + index
-                  }}
-                >
-                  <NitroProjectCard index={index} item={item} mode="home" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+          }
+        />
 
         <div className="section-space pt-16">
           <div className="grid gap-10 xl:grid-cols-[0.42fr_0.58fr]">

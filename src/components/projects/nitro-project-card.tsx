@@ -15,15 +15,15 @@ export function NitroProjectCard({
 
   return (
     <article
-      className={`floating-card overflow-hidden rounded-[42px] border-white/8 bg-[rgb(4,20,42)] ${
+      className={`floating-card overflow-hidden rounded-[42px] border-white/8 bg-[rgb(3,18,39)] ${
         isHome
-          ? "min-h-[calc(100svh-6.75rem)] p-6 sm:p-8 lg:p-10"
+          ? "min-h-[calc(100svh-11.25rem)] p-6 sm:p-8 lg:p-10"
           : "p-5 sm:p-6 lg:p-8"
       }`}
     >
       <div
         className={`relative overflow-hidden rounded-[32px] border border-white/10 ${
-          isHome ? "h-[50vh] min-h-[400px] max-h-[540px]" : "h-[320px] sm:h-[360px]"
+          isHome ? "h-[48vh] min-h-[360px] max-h-[500px]" : "h-[320px] sm:h-[360px]"
         }`}
         style={{ backgroundImage: item.visual.base }}
       >
