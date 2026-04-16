@@ -3,6 +3,14 @@ export type ProjectCategory = {
   subtitle: string;
   description: string;
   highlights: string[];
+  works: {
+    client: string;
+    deliverables: string[];
+    format: string;
+    note: string;
+    title: string;
+    year: string;
+  }[];
   year: string;
   category: string;
   visual: {
@@ -26,6 +34,35 @@ export const projectCategories: ProjectCategory[] = [
     description:
       "Platform-native edits designed for retention, pace, and polish. Every cut is shaped to feel immediate without sacrificing taste.",
     highlights: ["Hook-led pacing", "Caption styling", "Audience-first rhythm"],
+    works: [
+      {
+        client: "Aster Studio",
+        deliverables: ["Launch reel", "Cutdowns", "Caption pack"],
+        format: "Vertical campaign edits",
+        note:
+          "A social-first rollout built around sharp hooks, visual pacing, and quick product clarity.",
+        title: "Summer Launch Series",
+        year: "2026"
+      },
+      {
+        client: "Marlow Beauty",
+        deliverables: ["UGC edit", "Paid social cut", "Retention pass"],
+        format: "Performance-led short video",
+        note:
+          "Short edits shaped for paid distribution with a cleaner luxury feel than typical direct-response content.",
+        title: "Paid Social Retention Cuts",
+        year: "2025"
+      },
+      {
+        client: "Northline Fitness",
+        deliverables: ["Creator edit", "Story set", "Alt openings"],
+        format: "Creator-led promo assets",
+        note:
+          "A modular edit system for testing multiple intros while keeping the brand tone cohesive.",
+        title: "Creator Promo System",
+        year: "2025"
+      }
+    ],
     year: "2026",
     category: "Content Editing",
     visual: {
@@ -40,6 +77,35 @@ export const projectCategories: ProjectCategory[] = [
     description:
       "Longer edits with clean structure, tonal control, and a strong emotional arc. Built for clarity, texture, and sustained attention.",
     highlights: ["Narrative shaping", "Pacing refinement", "Visual continuity"],
+    works: [
+      {
+        client: "Field Notes",
+        deliverables: ["Hero film edit", "Trailer", "YouTube version"],
+        format: "Long-form brand storytelling",
+        note:
+          "A structure-first edit balancing interviews, texture shots, and measured pacing for a premium final film.",
+        title: "Founder Story Film",
+        year: "2026"
+      },
+      {
+        client: "Arc Vessel",
+        deliverables: ["Episode edit", "Teaser cut", "Social trims"],
+        format: "Narrative documentary edit",
+        note:
+          "Built for sustained attention with stronger rhythm changes and cleaner transitions between story beats.",
+        title: "Mini Documentary Episode",
+        year: "2025"
+      },
+      {
+        client: "Studio Haven",
+        deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
+        format: "Case study editorial",
+        note:
+          "Longer-form editing with emphasis on clarity, emotional build, and polished delivery across platforms.",
+        title: "Case Study Feature",
+        year: "2025"
+      }
+    ],
     year: "2026",
     category: "Editorial Film",
     visual: {
@@ -54,6 +120,35 @@ export const projectCategories: ProjectCategory[] = [
     description:
       "Short films that lean into atmosphere, restraint, and visual memory. Framing, motion, and sound are treated as one system.",
     highlights: ["Mood-driven cuts", "Cinematic restraint", "Story-led sequencing"],
+    works: [
+      {
+        client: "Independent",
+        deliverables: ["Festival cut", "Trailer", "Sound pass"],
+        format: "Narrative short film",
+        note:
+          "A restrained short film edit shaped around atmosphere, visual memory, and carefully paced reveals.",
+        title: "Silent Tides",
+        year: "2026"
+      },
+      {
+        client: "Artist Commission",
+        deliverables: ["Performance film", "Title sequence", "Master export"],
+        format: "Poetic visual short",
+        note:
+          "A cinematic short pairing performance footage with layered sound design and a sparse editorial rhythm.",
+        title: "Glass Room",
+        year: "2025"
+      },
+      {
+        client: "Personal Work",
+        deliverables: ["Director's cut", "Still pull set", "Screening version"],
+        format: "Experimental short",
+        note:
+          "An image-led piece focused on tone, composition, and tension rather than overt exposition.",
+        title: "Blue Hour",
+        year: "2025"
+      }
+    ],
     year: "2026",
     category: "Narrative Motion",
     visual: {
@@ -68,6 +163,35 @@ export const projectCategories: ProjectCategory[] = [
     description:
       "Sound beds, transitions, and mixes that deepen the world of the piece. The goal is subtle immersion, not overstated effect.",
     highlights: ["Clean mixes", "Spatial texture", "Intentional transitions"],
+    works: [
+      {
+        client: "Twelve North",
+        deliverables: ["Sound design", "Mix", "Broadcast master"],
+        format: "Brand soundscape package",
+        note:
+          "A subtle sound pass that gave the film more scale and emotional texture without becoming overdesigned.",
+        title: "Launch Sound World",
+        year: "2026"
+      },
+      {
+        client: "Luna Harbor",
+        deliverables: ["Podcast mix", "Trailer audio", "Cleanup pass"],
+        format: "Voice-led audio production",
+        note:
+          "A cleaner vocal mix and more controlled transitions designed for clarity across headphones and speakers.",
+        title: "Narrative Audio Mix",
+        year: "2025"
+      },
+      {
+        client: "Motion Campaign",
+        deliverables: ["Transition effects", "Low-end treatment", "Final stems"],
+        format: "Sound design support",
+        note:
+          "A tailored effects and mix layer built to support a premium edit rather than overpower it.",
+        title: "Campaign Sound Finish",
+        year: "2025"
+      }
+    ],
     year: "2026",
     category: "Sound World",
     visual: {
@@ -82,6 +206,35 @@ export const projectCategories: ProjectCategory[] = [
     description:
       "Visual systems and design assets that support motion work with the same calm confidence. Useful, elevated, and consistent across touchpoints.",
     highlights: ["Identity support", "Campaign assets", "Refined layout systems"],
+    works: [
+      {
+        client: "Helio Studio",
+        deliverables: ["Title cards", "Social assets", "Campaign layouts"],
+        format: "Motion support design",
+        note:
+          "A supporting design system created to make campaigns feel unified across video, stills, and rollout assets.",
+        title: "Campaign Asset System",
+        year: "2026"
+      },
+      {
+        client: "Mira House",
+        deliverables: ["Identity refinements", "Pitch deck visuals", "Story frames"],
+        format: "Visual identity support",
+        note:
+          "Refined layouts and brand elements designed to sit naturally alongside motion and editorial work.",
+        title: "Identity Extension Kit",
+        year: "2025"
+      },
+      {
+        client: "North Coast",
+        deliverables: ["Lookbook layouts", "Motion frames", "Digital assets"],
+        format: "Brand presentation design",
+        note:
+          "A disciplined set of visual assets that carried the same tone across multiple launch touchpoints.",
+        title: "Lookbook and Launch Assets",
+        year: "2025"
+      }
+    ],
     year: "2026",
     category: "Design Support",
     visual: {
@@ -101,9 +254,9 @@ export const heroHighlights = [
 ];
 
 export const heroLines = [
-  "a creative partner with focus on",
-  "short-form edits",
-  "cinematic storytelling"
+  "editing, motion, and sound for",
+  "brands, campaigns, and",
+  "story-led visuals"
 ];
 
 export const heroAsideCards = [

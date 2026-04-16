@@ -25,8 +25,7 @@ export function Footer() {
                     {item.label}
                   </Link>
                 ))}
-              </div>
-              <p>Copyright {year} Amelie</p>
+              </div>              
             </div>
           </div>
         </div>

@@ -20,7 +20,6 @@ export function HomeStackedShowcase() {
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
               <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-              
             </div>
           </Reveal>
 
@@ -40,8 +39,6 @@ export function HomeStackedShowcase() {
               </p>
             </div>
           </Reveal>
-
-        
         </div>
 
         <div className="mt-16 space-y-5">
@@ -63,10 +60,11 @@ export function HomeStackedShowcase() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.1} amount={0.18} distance={36}>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
-            <div className="image-panel" />
-            <div className="image-panel" />
+        <Reveal delay={0.1} amount={0.18} distance={30}>
+          <div className="mt-10">
+            <Link className="secondary-button" href="/about-me">
+              About Me
+            </Link>
           </div>
         </Reveal>
 
@@ -89,17 +87,16 @@ export function HomeStackedShowcase() {
       <section className="layout-shell hidden pt-12 lg:block">
         <ProjectStackScene
           items={projectPreview}
-          entryOffset={1220}
-          leadIn={0.28}
+          entryOffset={920}
+          leadIn={0.14}
           mode="home"
-          sceneHeightPerItem={146}
+          sceneHeightPerItem={132}
           overlay={
             <div className="flex min-h-[calc(100svh-7.25rem)] flex-col justify-between pt-8">
               <div>
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
                     <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-                    
                   </div>
                 </Reveal>
 
@@ -139,22 +136,11 @@ export function HomeStackedShowcase() {
                 <p className="max-w-4xl font-serif text-[2.45rem] leading-[1.05] text-mist xl:text-[3.2rem]">
                   {aboutPhilosophy}
                 </p>
-              </div>
-            </Reveal>
-          </div>
-
-          <div className="mt-14 grid gap-5 lg:grid-cols-[1fr_1fr_auto]">
-            <Reveal amount={0.18} distance={36}>
-              <div className="image-panel h-[380px]" />
-            </Reveal>
-            <Reveal delay={0.06} amount={0.18} distance={36}>
-              <div className="image-panel h-[380px]" />
-            </Reveal>
-            <Reveal delay={0.1} amount={0.18} distance={28}>
-              <div className="flex items-end justify-start lg:justify-end">
-                <Link className="secondary-button" href="/about-me">
-                  About Me
-                </Link>
+                <div className="mt-10">
+                  <Link className="secondary-button" href="/about-me">
+                    About Me
+                  </Link>
+                </div>
               </div>
             </Reveal>
           </div>

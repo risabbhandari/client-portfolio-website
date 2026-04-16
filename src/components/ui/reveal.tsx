@@ -16,7 +16,7 @@ export function Reveal({
   className,
   delay = 0,
   amount = 0.28,
-  distance = 44
+  distance = 32
 }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -29,7 +29,11 @@ export function Reveal({
           : { opacity: 0, y: distance }
       }
       style={{ willChange: "transform, opacity" }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay }}
+      transition={{
+        delay,
+        duration: 1.05,
+        ease: [0.22, 1, 0.36, 1]
+      }}
       viewport={{ once: true, amount, margin: "0px 0px -8% 0px" }}
       whileInView={
         shouldReduceMotion

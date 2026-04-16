@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { NitroProjectCard } from "@/components/projects/nitro-project-card";
-import { ProjectStackScene } from "@/components/projects/project-stack-scene";
+import { ExpandableProjectList } from "@/components/projects/expandable-project-list";
 import { Reveal } from "@/components/ui/reveal";
 import { projectCategories } from "@/data/site";
 
@@ -33,24 +32,15 @@ export default function ProjectsPage() {
 
       <div className="section-divider mt-24">
         <Reveal amount={0.18} distance={28}>
-          <span className="eyebrow">.clients</span>
+          <div className="max-w-3xl">
+            <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#8fb2d4]">
+              Click a category to open the work inside it.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-10 space-y-7 lg:hidden">
-          {projectCategories.map((item, index) => (
-            <Reveal
-              amount={0.16}
-              delay={index * 0.05}
-              distance={40}
-              key={item.title}
-            >
-              <NitroProjectCard index={index} item={item} />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-12 hidden lg:block">
-          <ProjectStackScene items={projectCategories} leadIn={0.06} mode="home" />
+        <div className="mt-10">
+          <ExpandableProjectList items={projectCategories} />
         </div>
       </div>
 
