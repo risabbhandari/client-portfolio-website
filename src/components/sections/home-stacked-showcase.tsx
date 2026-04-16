@@ -20,9 +20,7 @@ export function HomeStackedShowcase() {
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
               <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[0.72rem] uppercase tracking-[0.26em] text-[#a9c2d8]">
-                available for new projects
-              </span>
+              
             </div>
           </Reveal>
 
@@ -43,13 +41,7 @@ export function HomeStackedShowcase() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.12} amount={0.24} distance={36}>
-            <p className="mt-12 max-w-2xl text-base leading-8 text-[#b8cade]">
-              Amelie creates short-form edits, narrative films, sound-led
-              storytelling, and polished visual assets with a calm, premium
-              rhythm.
-            </p>
-          </Reveal>
+        
         </div>
 
         <div className="mt-16 space-y-5">
@@ -107,9 +99,7 @@ export function HomeStackedShowcase() {
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
                     <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-                    <span className="rounded-full border border-white/10 px-3 py-1 text-[0.72rem] uppercase tracking-[0.26em] text-[#a9c2d8]">
-                      available for new projects
-                    </span>
+                    
                   </div>
                 </Reveal>
 
@@ -131,21 +121,7 @@ export function HomeStackedShowcase() {
                 </Reveal>
               </div>
 
-              <Reveal delay={0.12} amount={0.28} distance={32}>
-                <div className="grid gap-10 lg:grid-cols-[0.62fr_0.38fr] lg:items-end">
-                  <p className="max-w-2xl text-lg leading-8 text-[#b8cade]">
-                    Amelie creates short-form edits, narrative films, sound-led
-                    storytelling, and polished visual assets with a calm,
-                    premium rhythm.
-                  </p>
-
-                  <p className="max-w-md text-base leading-8 text-[#8ea8c3]">
-                    Creative lanes across editing, cinematic storytelling,
-                    sound, and design support. Built to feel minimal, elegant,
-                    and precise.
-                  </p>
-                </div>
-              </Reveal>
+             
             </div>
           }
         />

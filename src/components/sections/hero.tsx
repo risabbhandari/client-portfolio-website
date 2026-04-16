@@ -11,9 +11,6 @@ export function Hero() {
           <Reveal>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
               <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[0.72rem] uppercase tracking-[0.26em] text-[#a9c2d8]">
-                available for new projects
-              </span>
             </div>
           </Reveal>
 
@@ -35,16 +32,7 @@ export function Hero() {
               </div>
             </div>
           </Reveal>
-
-          <Reveal delay={0.16}>
-            <p className="mt-10 max-w-2xl text-lg leading-8 text-[#b8cade] sm:text-[1.15rem]">
-              Amelie creates short-form edits, narrative films, sound-led
-              storytelling, and polished visual assets with a calm, premium
-              rhythm. The goal is a site that feels minimal, elegant, and
-              quietly cinematic rather than loud.
-            </p>
-          </Reveal>
-
+      
           <Reveal delay={0.24}>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link className="primary-button" href="/projects">
