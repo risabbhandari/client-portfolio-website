@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-abyss: 1 22 43;
+  --color-trench: 2 16 36;
+  --color-surface: 5 38 89;
+  --color-tide: 0 56 90;
+  --color-muted: 106 144 180;
+  --color-light: 125 160 202;
+  --color-mist: 210 219 235;
+  --color-accent: 193 232 255;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-trench));
+  background-image:
+    radial-gradient(circle at 18% 10%, rgba(125, 160, 202, 0.07) 0%, transparent 20%),
+    radial-gradient(circle at 86% 14%, rgba(84, 131, 179, 0.1) 0%, transparent 22%),
+    linear-gradient(180deg, rgba(2, 16, 36, 1) 0%, rgba(3, 18, 39, 1) 100%);
+  color: rgb(var(--color-mist));
+  font-family:
+    "Inter", "Manrope", "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(193, 232, 255, 0.22);
+  color: rgb(var(--color-mist));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family:
+      "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Baskerville",
+      "Times New Roman", serif;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: #b3c6d9;
+  }
+}
+
+@layer components {
+  .layout-shell {
+    @apply mx-auto w-full max-w-[1240px] px-6 sm:px-8 lg:px-10;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .glass-panel {
+    @apply relative overflow-hidden border border-white/10 bg-ocean-panel shadow-panel backdrop-blur-xl;
+  }
+
+  .glass-panel::after {
+    background: linear-gradient(
+      135deg,
+      rgba(193, 232, 255, 0.12) 0%,
+      rgba(125, 160, 202, 0.04) 34%,
+      rgba(1, 22, 43, 0) 100%
+    );
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.72rem] uppercase tracking-[0.34em] text-[#8fb2d4];
+  }
+
+  .eyebrow::before {
+    background: linear-gradient(90deg, rgba(125, 160, 202, 0.08), rgba(193, 232, 255, 0.9));
+    content: "";
+    height: 1px;
+    width: 1.6rem;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-[#d2dbeb]/20 bg-[#c1e8ff] px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#021024] transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:bg-[#d8f1ff];
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#d2dbeb] transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:text-[#eef7ff];
+  }
+
+  .soft-shell {
+    @apply border border-white/10 bg-[rgba(4,20,42,0.84)] shadow-[0_18px_70px_rgba(1,22,43,0.28)] backdrop-blur-xl;
+  }
+
+  .floating-card {
+    @apply relative overflow-hidden border border-white/10 bg-[rgba(4,20,42,0.92)] shadow-[0_28px_90px_rgba(1,22,43,0.32)] transition duration-500 ease-out-expo hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_36px_110px_rgba(1,22,43,0.42)];
+  }
+
+  .floating-card::after {
+    background: linear-gradient(
+      150deg,
+      rgba(193, 232, 255, 0.12) 0%,
+      rgba(125, 160, 202, 0.03) 28%,
+      rgba(1, 22, 43, 0) 100%
+    );
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2 text-sm uppercase tracking-[0.18em] text-[#bdd0e2] transition duration-500 ease-out-expo hover:bg-white/5 hover:text-[#eef7ff];
+  }
+
+  .nav-link-active {
+    @apply bg-white/10 text-[#f2f8ff];
+  }
+
+  .nav-cta {
+    @apply inline-flex items-center justify-center rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.18em] text-[#d2dbeb] transition duration-500 ease-out-expo hover:border-white/20 hover:bg-[rgba(255,255,255,0.06)] hover:text-[#eef7ff];
+  }
+
+  .section-divider {
+    @apply border-t border-white/10 pt-10;
+  }
+
+  .image-panel {
+    @apply floating-card rounded-[34px];
+    min-height: 22rem;
+  }
+
+  .image-panel::before {
+    background:
+      radial-gradient(circle at 32% 28%, rgba(193, 232, 255, 0.18) 0%, transparent 18%),
+      linear-gradient(145deg, rgba(125, 160, 202, 0.32), rgba(2, 16, 36, 0.92));
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+}
