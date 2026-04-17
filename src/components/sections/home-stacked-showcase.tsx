@@ -19,22 +19,22 @@ export function HomeStackedShowcase() {
         <div className="blue-panel blue-panel-deep flex min-h-[72svh] flex-col justify-between px-6 py-8 sm:px-8 sm:py-10">
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-              <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
+              <span className="text-mist">Hey, I&apos;m Amelie</span>
             </div>
           </Reveal>
 
           <Reveal delay={0.06} amount={0.24} distance={42}>
             <div className="mt-10 space-y-2">
-              <p className="text-[0.92rem] uppercase tracking-[0.3em] text-[#7da0ca]">
+              <p className="text-[0.92rem] uppercase tracking-[0.3em] text-[#94a2bf]">
                 creative portfolio
               </p>
               <h1 className="max-w-4xl text-balance font-serif text-5xl leading-[0.9] text-mist sm:text-6xl">
                 {heroLines[0]}
               </h1>
-              <p className="font-serif text-4xl leading-[0.94] text-[#dfe9f4] sm:text-5xl">
+              <p className="font-serif text-4xl leading-[0.94] text-[#eef3f8] sm:text-5xl">
                 {heroLines[1]}
               </p>
-              <p className="font-serif text-4xl leading-[0.94] text-[#9eb9d4] sm:text-5xl">
+              <p className="font-serif text-4xl leading-[0.94] text-[#c8d4e2] sm:text-5xl">
                 {heroLines[2]}
               </p>
             </div>
@@ -93,22 +93,22 @@ export function HomeStackedShowcase() {
               <div>
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-                    <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
+                    <span className="text-mist">Hey, I&apos;m Amelie</span>
                   </div>
                 </Reveal>
 
                 <Reveal delay={0.06} amount={0.3} distance={40}>
                   <div className="mt-10 max-w-6xl space-y-3">
-                    <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#7da0ca]">
+                    <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#94a2bf]">
                       creative portfolio
                     </p>
                     <h1 className="max-w-6xl text-balance font-serif text-[5.7rem] leading-[0.9] text-mist xl:text-[6.8rem]">
                       {heroLines[0]}
                     </h1>
-                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#dfe9f4] xl:text-[5.55rem]">
+                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#eef3f8] xl:text-[5.55rem]">
                       {heroLines[1]}
                     </p>
-                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#9eb9d4] xl:text-[5.55rem]">
+                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#c8d4e2] xl:text-[5.55rem]">
                       {heroLines[2]}
                     </p>
                   </div>

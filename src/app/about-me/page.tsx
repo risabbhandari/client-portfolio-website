@@ -24,7 +24,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#9fb5ca]">
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ced8e4]">
               A multidisciplinary creative practice shaped by cinematic pacing,
               subtle finish, and collaboration that feels thoughtful without being
               heavy.
@@ -37,10 +37,10 @@ export default function AboutPage() {
                 <div className="space-y-5">
                   {aboutFacts.map((fact) => (
                     <div className="pb-5" key={fact.label}>
-                      <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#7da0ca]">
+                      <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#94a2bf]">
                         {fact.label}
                       </p>
-                      <p className="mt-3 max-w-xs text-base leading-8 text-[#c5d5e4]">
+                      <p className="mt-3 max-w-xs text-base leading-8 text-[#d2dbeb]">
                         {fact.value}
                       </p>
                     </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-5 lg:grid-cols-[1fr_1fr_auto]">
             <Reveal amount={0.18} distance={36}>
               <div className="blue-panel blue-panel-surface h-[360px] px-8 py-10">
-                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#d7e8f8]">
+                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#d2dbeb]">
                   editorial
                 </p>
                 <p className="mt-6 max-w-sm font-serif text-4xl leading-[0.98] text-mist">
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.06} amount={0.18} distance={36}>
               <div className="blue-panel blue-panel-mist h-[360px] px-8 py-10">
-                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#eef7ff]">
+                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#eef4fa]">
                   collaboration
                 </p>
                 <p className="mt-6 max-w-sm font-serif text-4xl leading-[0.98] text-mist">
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <h2 className="font-serif text-4xl leading-[1] text-mist sm:text-5xl lg:text-[3.7rem]">
                   Editorial instincts with a cinematic lean.
                 </h2>
-                <p className="mt-6 max-w-3xl text-base leading-8 text-[#b7c8db] sm:text-lg">
+                <p className="mt-6 max-w-3xl text-base leading-8 text-[#d2dbeb] sm:text-lg">
                   {aboutStory}
                 </p>
               </div>

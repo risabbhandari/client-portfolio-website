@@ -10,23 +10,23 @@ export function Hero() {
         <div>
           <Reveal>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-              <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
+              <span className="text-mist">Hey, I&apos;m Amelie</span>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
             <div className="mt-8 space-y-3 sm:space-y-4">
-              <p className="max-w-2xl text-[1rem] uppercase tracking-[0.32em] text-[#7da0ca]">
+              <p className="max-w-2xl text-[1rem] uppercase tracking-[0.32em] text-[#94a2bf]">
                 creative portfolio
               </p>
               <h1 className="max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.4rem]">
                 {heroLines[0]}
               </h1>
               <div className="space-y-1">
-                <p className="font-serif text-5xl leading-[0.94] text-[#dfe9f4]/96 sm:text-6xl lg:text-[5.3rem]">
+                <p className="font-serif text-5xl leading-[0.94] text-[#eef3f8]/96 sm:text-6xl lg:text-[5.3rem]">
                   {heroLines[1]}
                 </p>
-                <p className="font-serif text-5xl leading-[0.94] text-[#9eb9d4] sm:text-6xl lg:text-[5.3rem]">
+                <p className="font-serif text-5xl leading-[0.94] text-[#c8d4e2] sm:text-6xl lg:text-[5.3rem]">
                   {heroLines[2]}
                 </p>
               </div>
@@ -45,16 +45,16 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <div className="mt-12 grid grid-cols-3 gap-3 border-t border-white/10 pt-8">
+            <div className="mt-12 grid grid-cols-3 gap-3 border-t border-[#d2dbeb]/16 pt-8">
               {heroHighlights.map((highlight) => (
                 <div
-                  className="rounded-[24px] border border-white/10 bg-[rgba(193,232,255,0.03)] px-4 py-5"
+                  className="rounded-[24px] border border-[#d2dbeb]/16 bg-[rgba(210,219,235,0.06)] px-4 py-5"
                   key={highlight.label}
                 >
-                  <div className="text-2xl font-serif text-accent">
+                  <div className="text-2xl font-serif text-light">
                     {highlight.value}
                   </div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.24em] text-[#b7cedf]">
+                  <div className="mt-2 text-xs uppercase tracking-[0.24em] text-[#c8d4e0]">
                     {highlight.label}
                   </div>
                 </div>
@@ -65,8 +65,8 @@ export function Hero() {
 
         <Reveal delay={0.22}>
           <div className="relative min-h-[560px]">
-            <div className="absolute inset-x-[10%] top-8 h-40 rounded-full bg-[#5483b3]/14 blur-3xl" />
-            <div className="absolute -left-3 top-12 hidden h-px w-16 bg-white/10 xl:block" />
+            <div className="absolute inset-x-[10%] top-8 h-40 rounded-full bg-[#94a2bf]/14 blur-3xl" />
+            <div className="absolute -left-3 top-12 hidden h-px w-16 bg-[#d2dbeb]/16 xl:block" />
             <div className="space-y-5 pt-6">
               {heroAsideCards.map((card, index) => (
                 <div
@@ -80,15 +80,15 @@ export function Hero() {
                   key={card.title}
                 >
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-[0.68rem] uppercase tracking-[0.32em] text-[#7da0ca]">
+                    <span className="text-[0.68rem] uppercase tracking-[0.32em] text-[#94a2bf]">
                       0{index + 1}
                     </span>
-                    <span className="h-2 w-2 rounded-full bg-[#c1e8ff]" />
+                    <span className="h-2 w-2 rounded-full bg-[#d2dbeb]" />
                   </div>
                   <h2 className="mt-10 max-w-sm font-serif text-4xl leading-[0.98] text-mist">
                     {card.title}
                   </h2>
-                  <p className="mt-4 max-w-sm text-base leading-8 text-[#b7c8da]">
+                  <p className="mt-4 max-w-sm text-base leading-8 text-[#d2dbeb]">
                     {card.detail}
                   </p>
                 </div>

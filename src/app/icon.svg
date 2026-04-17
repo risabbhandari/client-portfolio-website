@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="ocean" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C1E8FF" />
-      <stop offset="100%" stop-color="#00385a" />
+      <stop offset="0%" stop-color="#D2DBEB" />
+      <stop offset="100%" stop-color="#6A90B4" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="#021024" />
+  <rect width="64" height="64" rx="18" fill="#01162b" />
   <path
     d="M16 22c5 0 5 4 10 4s5-4 10-4 5 4 10 4"
     fill="none"
@@ -16,16 +16,15 @@
   <path
     d="M16 34c5 0 5 4 10 4s5-4 10-4 5 4 10 4"
     fill="none"
-    stroke="#7DA0CA"
+    stroke="#94A2BF"
     stroke-linecap="round"
     stroke-width="4"
   />
   <path
     d="M16 46c5 0 5 4 10 4s5-4 10-4 5 4 10 4"
     fill="none"
-    stroke="#5483B3"
+    stroke="#6A90B4"
     stroke-linecap="round"
     stroke-width="4"
   />
 </svg>
-

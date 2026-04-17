@@ -70,9 +70,9 @@ export const projectCategories: ProjectCategory[] = [
     year: "2026",
     category: "Content Editing",
     visual: {
-      base: "linear-gradient(135deg, rgba(3, 56, 90, 0.96) 0%, rgba(84, 131, 179, 0.52) 100%)",
-      glow: "rgba(193, 232, 255, 0.22)",
-      accent: "#C1E8FF"
+      base: "linear-gradient(135deg, rgba(1, 22, 43, 0.96) 0%, rgba(106, 144, 180, 0.58) 100%)",
+      glow: "rgba(210, 219, 235, 0.22)",
+      accent: "#D2DBEB"
     }
   },
   {
@@ -146,9 +146,9 @@ export const projectCategories: ProjectCategory[] = [
     year: "2026",
     category: "Editorial Film",
     visual: {
-      base: "linear-gradient(145deg, rgba(2, 16, 36, 0.98) 0%, rgba(5, 38, 89, 0.8) 100%)",
-      glow: "rgba(125, 160, 202, 0.18)",
-      accent: "#7DA0CA"
+      base: "linear-gradient(145deg, rgba(1, 22, 43, 0.98) 0%, rgba(0, 56, 90, 0.84) 100%)",
+      glow: "rgba(148, 162, 191, 0.2)",
+      accent: "#94A2BF"
     }
   },
   {
@@ -192,8 +192,8 @@ export const projectCategories: ProjectCategory[] = [
     year: "2026",
     category: "Narrative Motion",
     visual: {
-      base: "linear-gradient(140deg, rgba(84, 131, 179, 0.72) 0%, rgba(1, 22, 43, 0.92) 100%)",
-      glow: "rgba(210, 219, 235, 0.18)",
+      base: "linear-gradient(140deg, rgba(106, 144, 180, 0.76) 0%, rgba(1, 22, 43, 0.94) 100%)",
+      glow: "rgba(210, 219, 235, 0.2)",
       accent: "#D2DBEB"
     }
   },
@@ -229,8 +229,8 @@ export const projectCategories: ProjectCategory[] = [
     year: "2026",
     category: "Sound World",
     visual: {
-      base: "linear-gradient(145deg, rgba(1, 22, 43, 0.95) 0%, rgba(0, 56, 90, 0.92) 55%, rgba(106, 144, 180, 0.54) 100%)",
-      glow: "rgba(84, 131, 179, 0.24)",
+      base: "linear-gradient(145deg, rgba(1, 22, 43, 0.96) 0%, rgba(0, 56, 90, 0.9) 52%, rgba(148, 162, 191, 0.48) 100%)",
+      glow: "rgba(106, 144, 180, 0.24)",
       accent: "#6A90B4"
     }
   },
@@ -257,9 +257,9 @@ export const projectCategories: ProjectCategory[] = [
     year: "2026",
     category: "Design Support",
     visual: {
-      base: "linear-gradient(135deg, rgba(5, 38, 89, 0.82) 0%, rgba(125, 160, 202, 0.55) 100%)",
-      glow: "rgba(193, 232, 255, 0.18)",
-      accent: "#5483B3"
+      base: "linear-gradient(135deg, rgba(0, 56, 90, 0.82) 0%, rgba(148, 162, 191, 0.6) 100%)",
+      glow: "rgba(210, 219, 235, 0.18)",
+      accent: "#94A2BF"
     }
   }
 ];

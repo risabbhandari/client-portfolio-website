@@ -13,23 +13,23 @@ export function NitroProjectCard({
 }: NitroProjectCardProps) {
   const isHome = mode === "home";
   const shellBackgrounds = [
-    "linear-gradient(145deg, rgb(2, 16, 36), rgb(5, 38, 89))",
-    "linear-gradient(145deg, rgb(5, 38, 89), rgb(84, 131, 179))",
-    "linear-gradient(145deg, rgb(84, 131, 179), rgb(2, 16, 36))",
-    "linear-gradient(145deg, rgb(106, 144, 180), rgb(2, 16, 36))",
-    "linear-gradient(145deg, rgb(125, 160, 202), rgb(2, 16, 36))"
+    "linear-gradient(145deg, rgb(1, 22, 43), rgb(0, 56, 90))",
+    "linear-gradient(145deg, rgb(0, 56, 90), rgb(106, 144, 180))",
+    "linear-gradient(145deg, rgb(106, 144, 180), rgb(1, 22, 43))",
+    "linear-gradient(145deg, rgb(148, 162, 191), rgb(1, 22, 43))",
+    "linear-gradient(145deg, rgb(210, 219, 235), rgb(0, 56, 90))"
   ];
   const shellGlow = [
-    "radial-gradient(circle at 20% 18%, rgba(193, 232, 255, 0.14), transparent 18%)",
-    "radial-gradient(circle at 76% 16%, rgba(125, 160, 202, 0.16), transparent 18%)",
-    "radial-gradient(circle at 22% 22%, rgba(193, 232, 255, 0.12), transparent 18%)",
-    "radial-gradient(circle at 74% 20%, rgba(193, 232, 255, 0.12), transparent 18%)",
-    "radial-gradient(circle at 20% 16%, rgba(193, 232, 255, 0.14), transparent 18%)"
+    "radial-gradient(circle at 20% 18%, rgba(210, 219, 235, 0.14), transparent 18%)",
+    "radial-gradient(circle at 76% 16%, rgba(148, 162, 191, 0.18), transparent 18%)",
+    "radial-gradient(circle at 22% 22%, rgba(210, 219, 235, 0.12), transparent 18%)",
+    "radial-gradient(circle at 74% 20%, rgba(210, 219, 235, 0.12), transparent 18%)",
+    "radial-gradient(circle at 20% 16%, rgba(210, 219, 235, 0.14), transparent 18%)"
   ];
 
   return (
     <article
-      className={`relative overflow-hidden rounded-[42px] border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.48)] ${
+      className={`relative overflow-hidden rounded-[42px] border border-[#d2dbeb]/16 shadow-[0_28px_90px_rgba(1,22,43,0.26)] ${
         isHome
           ? "min-h-[calc(100svh-11.25rem)] p-6 sm:p-8 lg:p-10"
           : "p-5 sm:p-6 lg:p-8"
@@ -41,12 +41,12 @@ export function NitroProjectCard({
         style={{ background: shellGlow[index % shellGlow.length] }}
       />
       <div
-        className={`relative overflow-hidden rounded-[32px] border border-white/10 ${
+        className={`relative overflow-hidden rounded-[32px] border border-[#d2dbeb]/18 ${
           isHome ? "h-[48vh] min-h-[360px] max-h-[500px]" : "h-[320px] sm:h-[360px]"
         }`}
         style={{ backgroundImage: item.visual.base }}
       >
-        <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(1,22,43,0.03),rgba(1,22,43,0.56))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(1,22,43,0.08),rgba(1,22,43,0.52))]" />
         <div
           className="pointer-events-none absolute inset-x-[14%] top-8 h-32 rounded-full blur-3xl"
           style={{ backgroundColor: item.visual.glow }}
@@ -55,21 +55,21 @@ export function NitroProjectCard({
         <div className="relative flex h-full flex-col justify-between p-6 lg:p-8">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="text-[0.72rem] uppercase tracking-[0.34em] text-[#e7f1fb]">
+              <p className="text-[0.72rem] uppercase tracking-[0.34em] text-[#eef4fa]">
                 {item.year}
               </p>
-              <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[#cadef0]">
+              <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[#cad6e2]">
                 {item.category}
               </p>
             </div>
 
-            <span className="rounded-full border border-white/15 bg-[rgba(255,255,255,0.05)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#edf5fc]">
+            <span className="rounded-full border border-[#d2dbeb]/22 bg-[rgba(255,255,255,0.08)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eef4fa]">
               {item.subtitle}
             </span>
           </div>
 
           <div className="flex items-end justify-between gap-4">
-            <div className="h-px flex-1 bg-white/18" />
+            <div className="h-px flex-1 bg-[#d2dbeb]/18" />
             <div
               className="h-2.5 w-2.5 rounded-full"
               style={{ backgroundColor: item.visual.accent }}
@@ -84,7 +84,7 @@ export function NitroProjectCard({
         } lg:items-end`}
       >
         <div>
-          <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#7da0ca]">
+          <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#94a2bf]">
             {String(index + 1).padStart(2, "0")}
           </p>
           <h2
@@ -99,7 +99,7 @@ export function NitroProjectCard({
         </div>
 
         <div>
-          <p className="max-w-xl text-[1rem] leading-8 text-[#c4d3e2]">
+          <p className="max-w-xl text-[1rem] leading-8 text-[#d2dbeb]">
             {item.description}
           </p>
         </div>

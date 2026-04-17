@@ -108,19 +108,19 @@ function ProjectCover({ item }: ProjectCoverProps) {
   const primaryWork = featured[0];
 
   return (
-    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[rgba(2,16,36,0.56)] p-4 sm:p-5">
+    <div className="relative overflow-hidden rounded-[32px] border border-[#d2dbeb]/16 bg-[rgba(1,22,43,0.64)] p-4 sm:p-5">
       <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
+        className="relative aspect-video overflow-hidden rounded-[24px] border border-[#d2dbeb]/18 bg-[rgba(1,22,43,0.86)]"
         title={`${item.title} featured video`}
         videoSource={primaryWork.videoSource}
       />
 
       <div className="mt-4">
         <div>
-          <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#dbe8f4]">
+          <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#d2dbeb]">
             {item.subtitle}
           </p>
-          <p className="mt-3 font-serif text-2xl leading-[0.96] text-[#f1f7ff]">
+          <p className="mt-3 font-serif text-2xl leading-[0.96] text-[#f2f6fa]">
             {primaryWork.title}
           </p>
         </div>
@@ -137,14 +137,14 @@ type ExpandedWorkCardProps = {
 function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
   return (
     <article
-      className="rounded-[30px] border border-white/10 p-5 sm:p-6"
+      className="rounded-[30px] border border-[#d2dbeb]/16 p-5 sm:p-6"
       style={{
         background:
-          "linear-gradient(160deg, rgba(84, 131, 179, 0.14), rgba(2, 16, 36, 0.58))"
+          "linear-gradient(160deg, rgba(148, 162, 191, 0.14), rgba(1, 22, 43, 0.58))"
       }}
     >
       <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
+        className="relative aspect-video overflow-hidden rounded-[24px] border border-[#d2dbeb]/18 bg-[rgba(1,22,43,0.86)]"
         title={`${work.title} video`}
         videoSource={work.videoSource}
       />
@@ -153,12 +153,12 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
         <h3 className="font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
           {work.title}
         </h3>
-        <p className="mt-4 text-base leading-8 text-[#c4d3e2]">{work.note}</p>
+        <p className="mt-4 text-base leading-8 text-[#d2dbeb]">{work.note}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {work.deliverables.map((deliverable) => (
             <span
-              className="rounded-full border border-white/10 bg-[rgba(84,131,179,0.14)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
+              className="rounded-full border border-[#d2dbeb]/14 bg-[rgba(210,219,235,0.08)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#dde6ef]"
               key={deliverable}
             >
               {deliverable}
@@ -173,18 +173,18 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
 export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const accordionBackgrounds = [
-    "linear-gradient(160deg, rgba(2, 16, 36, 0.98), rgba(5, 38, 89, 0.84))",
-    "linear-gradient(160deg, rgba(5, 38, 89, 0.92), rgba(84, 131, 179, 0.32))",
-    "linear-gradient(160deg, rgba(84, 131, 179, 0.54), rgba(2, 16, 36, 0.92))",
-    "linear-gradient(160deg, rgba(106, 144, 180, 0.5), rgba(2, 16, 36, 0.9))",
-    "linear-gradient(160deg, rgba(125, 160, 202, 0.36), rgba(2, 16, 36, 0.9))"
+    "linear-gradient(160deg, rgba(1, 22, 43, 0.98), rgba(0, 56, 90, 0.84))",
+    "linear-gradient(160deg, rgba(0, 56, 90, 0.92), rgba(106, 144, 180, 0.34))",
+    "linear-gradient(160deg, rgba(106, 144, 180, 0.54), rgba(1, 22, 43, 0.92))",
+    "linear-gradient(160deg, rgba(148, 162, 191, 0.48), rgba(1, 22, 43, 0.9))",
+    "linear-gradient(160deg, rgba(210, 219, 235, 0.28), rgba(0, 56, 90, 0.9))"
   ];
   const accordionGlows = [
-    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.1), transparent 20%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
-    "radial-gradient(circle at 82% 18%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
-    "radial-gradient(circle at 20% 18%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
-    "radial-gradient(circle at 78% 16%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
-    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.14), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)"
+    "radial-gradient(circle at 18% 16%, rgba(210, 219, 235, 0.1), transparent 20%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 82% 18%, rgba(210, 219, 235, 0.12), transparent 18%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 20% 18%, rgba(210, 219, 235, 0.12), transparent 18%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 78% 16%, rgba(210, 219, 235, 0.12), transparent 18%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 18% 16%, rgba(210, 219, 235, 0.14), transparent 18%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)"
   ];
 
   return (
@@ -194,8 +194,8 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
 
         return (
           <motion.section
-            animate={{ borderColor: isOpen ? "rgba(193,232,255,0.18)" : "rgba(255,255,255,0.08)" }}
-            className="relative overflow-hidden rounded-[40px] border border-white/10 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.45)] sm:p-6 lg:p-8"
+            animate={{ borderColor: isOpen ? "rgba(210,219,235,0.22)" : "rgba(148,162,191,0.16)" }}
+            className="relative overflow-hidden rounded-[40px] border border-[#94a2bf]/16 p-5 shadow-[0_28px_90px_rgba(1,22,43,0.22)] sm:p-6 lg:p-8"
             key={item.title}
             layout
             style={{ background: accordionBackgrounds[index % accordionBackgrounds.length] }}
@@ -216,7 +216,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
               >
                 <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
                   <div>
-                    <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#7da0ca]">
+                    <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#94a2bf]">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <h2 className="mt-5 max-w-4xl text-balance font-serif text-[2.5rem] leading-[0.94] text-mist sm:text-[3rem] lg:text-[3.45rem]">
@@ -225,12 +225,12 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                   </div>
 
                   <div className="flex items-end justify-between gap-4">
-                    <p className="max-w-xl text-[1rem] leading-8 text-[#c4d3e2]">
+                    <p className="max-w-xl text-[1rem] leading-8 text-[#d2dbeb]">
                       {item.description}
                     </p>
                     <motion.span
                       animate={{ rotate: isOpen ? 45 : 0 }}
-                      className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-white/10 bg-[rgba(255,255,255,0.04)] text-2xl text-[#eaf4ff]"
+                      className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-[#d2dbeb]/18 bg-[rgba(255,255,255,0.08)] text-2xl text-[#eef4fa]"
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                     >
                       +
@@ -249,15 +249,15 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                   initial={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <div className="mt-8 border-t border-white/10 pt-8">
+                  <div className="mt-8 border-t border-[#d2dbeb]/16 pt-8">
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-                      <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#8fb2d4]">
+                      <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#94a2bf]">
                         selected work
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {item.highlights.map((highlight) => (
                           <span
-                            className="rounded-full border border-white/10 bg-[rgba(84,131,179,0.14)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
+                            className="rounded-full border border-[#d2dbeb]/14 bg-[rgba(210,219,235,0.08)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#dde6ef]"
                             key={highlight}
                           >
                             {highlight}

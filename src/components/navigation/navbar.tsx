@@ -14,10 +14,10 @@ export function Navbar() {
         <div className="soft-shell rounded-[32px] px-5 py-4 sm:px-7">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <Link
-              className="flex items-center gap-3 rounded-full px-2 py-2 transition duration-500 ease-out-expo hover:bg-white/5"
+              className="flex items-center gap-3 rounded-full px-2 py-2 transition duration-500 ease-out-expo hover:bg-[#d2dbeb]/35"
               href="/"
             >
-              <span className="font-serif text-[1.4rem] tracking-[0.08em] text-mist">
+              <span className="font-serif text-[1.4rem] tracking-[0.08em] text-abyss">
                 .amelie
               </span>
             </Link>

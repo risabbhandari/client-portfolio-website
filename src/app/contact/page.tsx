@@ -24,7 +24,7 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#9fb5ca]">
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ced8e4]">
               I&apos;m open to thoughtful collaborations across editing,
               narrative work, short films, sound design, and supporting visual
               assets.
@@ -46,22 +46,22 @@ export default function ContactPage() {
                 <div className="mt-10 space-y-4">
                   {contactLinks.map((link, index) => (
                     <Link
-                      className="blue-list-card flex items-center justify-between gap-6 px-6 py-5 transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-white/20"
+                      className="blue-list-card flex items-center justify-between gap-6 px-6 py-5 transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-[#d2dbeb]/24"
                       href={link.href}
                       key={link.label}
                       rel="noreferrer"
                       style={{
                         background:
                           index % 2 === 0
-                            ? "linear-gradient(145deg, rgba(5, 38, 89, 0.68), rgba(2, 16, 36, 0.72))"
-                            : "linear-gradient(145deg, rgba(84, 131, 179, 0.26), rgba(2, 16, 36, 0.72))"
+                            ? "linear-gradient(145deg, rgba(1, 22, 43, 0.82), rgba(0, 56, 90, 0.74))"
+                            : "linear-gradient(145deg, rgba(106, 144, 180, 0.2), rgba(1, 22, 43, 0.74))"
                       }}
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                     >
-                      <span className="text-xs uppercase tracking-[0.3em] text-[#7da0ca]">
+                      <span className="text-xs uppercase tracking-[0.3em] text-[#94a2bf]">
                         {link.label}
                       </span>
-                      <span className="text-base text-[#eef6ff] sm:text-lg">
+                      <span className="text-base text-[#eef4fa] sm:text-lg">
                         {link.value}
                       </span>
                     </Link>
@@ -97,11 +97,11 @@ export default function ContactPage() {
                       style={{
                         background:
                           index === 1
-                            ? "linear-gradient(145deg, rgba(106, 144, 180, 0.3), rgba(2, 16, 36, 0.74))"
-                            : "linear-gradient(145deg, rgba(5, 38, 89, 0.62), rgba(2, 16, 36, 0.72))"
+                            ? "linear-gradient(145deg, rgba(148, 162, 191, 0.26), rgba(1, 22, 43, 0.76))"
+                            : "linear-gradient(145deg, rgba(0, 56, 90, 0.62), rgba(1, 22, 43, 0.72))"
                       }}
                     >
-                      <p className="relative text-base leading-8 text-[#c1d3e5]">{note}</p>
+                      <p className="relative text-base leading-8 text-[#d2dbeb]">{note}</p>
                     </div>
                   ))}
                 </div>

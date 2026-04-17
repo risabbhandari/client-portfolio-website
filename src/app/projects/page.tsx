@@ -26,7 +26,7 @@ export default function ProjectsPage() {
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
             <div className="blue-panel blue-panel-surface mt-8 max-w-4xl px-8 py-8">
-              <p className="max-w-3xl text-lg leading-8 text-[#d6e4f4]">
+              <p className="max-w-3xl text-lg leading-8 text-[#d2dbeb]">
                 I help brands, artists, and story-led teams build motion pieces
                 that feel elegant, emotionally clear, and cohesive across edit,
                 sound, and design.
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           <div className="section-divider mt-24">
             <Reveal amount={0.18} distance={28}>
               <div className="blue-panel blue-panel-muted max-w-3xl px-8 py-8">
-                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#eef7ff]">
+                <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#eef4fa]">
                   Click a category to open the work inside it.
                 </p>
               </div>
