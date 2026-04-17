@@ -9,98 +9,100 @@ type ExpandableProjectListProps = {
   items: ProjectCategory[];
 };
 
+type YouTubeEmbedProps = {
+  className?: string;
+  title: string;
+  youtubeId: string;
+};
+
+function YouTubeEmbed({ className, title, youtubeId }: YouTubeEmbedProps) {
+  return (
+    <div className={className}>
+      <iframe
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="absolute inset-0 h-full w-full"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+        src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&modestbranding=1`}
+        title={title}
+      />
+    </div>
+  );
+}
+
 type ProjectCoverProps = {
   item: ProjectCategory;
 };
 
 function ProjectCover({ item }: ProjectCoverProps) {
   const featured = item.works.slice(0, 3);
+  const primaryWork = featured[0];
 
   return (
-    <div
-      className="relative h-[320px] overflow-hidden rounded-[32px] border border-white/10 sm:h-[360px]"
-      style={{ backgroundImage: item.visual.base }}
-    >
-      <div className="absolute inset-0 bg-[linear-gradient(160deg,rgba(1,22,43,0.12),rgba(1,22,43,0.58))]" />
-      <div
-        className="pointer-events-none absolute left-[10%] top-[12%] h-36 w-36 rounded-full blur-3xl"
-        style={{ backgroundColor: item.visual.glow }}
+    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[rgba(2,16,36,0.56)] p-4 sm:p-5">
+      <YouTubeEmbed
+        className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
+        title={`${item.title} featured video`}
+        youtubeId={primaryWork.youtubeId}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.16),transparent_16%),radial-gradient(circle_at_28%_72%,rgba(255,255,255,0.08),transparent_18%)]" />
 
-      <div className="relative flex h-full flex-col justify-between p-6 sm:p-8">
-        <div className="flex items-start justify-between gap-4">
-          <span className="rounded-full border border-white/15 bg-[rgba(255,255,255,0.08)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-[#eff7ff]">
+      <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#dbe8f4]">
             {item.subtitle}
-          </span>
-          <span className="text-[0.72rem] uppercase tracking-[0.3em] text-[#dbe8f4]">
-            {item.year}
-          </span>
+          </p>
+          <p className="mt-3 font-serif text-2xl leading-[0.96] text-[#f1f7ff]">
+            {primaryWork.title}
+          </p>
         </div>
-
-        <div className="grid gap-3 sm:grid-cols-3">
-          {featured.map((work, index) => (
-            <div
-              className={`rounded-[24px] border border-white/12 bg-[rgba(2,16,36,0.42)] p-4 backdrop-blur-md ${
-                index === 0 ? "sm:col-span-2" : ""
-              }`}
-              key={work.title}
-            >
-              <p className="text-[0.62rem] uppercase tracking-[0.28em] text-[#cfe3f6]">
-                {work.client}
-              </p>
-              <p className="mt-4 font-serif text-2xl leading-[0.95] text-[#f1f7ff]">
-                {work.title}
-              </p>
-            </div>
-          ))}
-        </div>
+        <span className="rounded-full border border-white/15 bg-[rgba(255,255,255,0.06)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eff7ff]">
+          {item.year}
+        </span>
       </div>
+
     </div>
   );
 }
 
 type ExpandedWorkCardProps = {
-  item: ProjectCategory;
   work: ProjectCategory["works"][number];
 };
 
-function ExpandedWorkCard({ item, work }: ExpandedWorkCardProps) {
+function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
   return (
-    <article className="rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.03)] p-5 sm:p-6">
-      <div
-        className="relative h-[220px] overflow-hidden rounded-[24px] border border-white/10"
-        style={{ backgroundImage: item.visual.base }}
-      >
-        <div className="absolute inset-0 bg-[linear-gradient(160deg,rgba(1,22,43,0.18),rgba(1,22,43,0.62))]" />
-        <div
-          className="absolute inset-x-[18%] top-8 h-24 rounded-full blur-3xl"
-          style={{ backgroundColor: item.visual.glow }}
-        />
-        <div className="relative flex h-full flex-col justify-between p-5">
-          <div className="flex items-center justify-between gap-4">
-            <span className="rounded-full border border-white/15 bg-[rgba(255,255,255,0.06)] px-3 py-1.5 text-[0.64rem] uppercase tracking-[0.22em] text-[#eff7ff]">
-              {work.format}
-            </span>
-            <span className="text-[0.66rem] uppercase tracking-[0.26em] text-[#d6e6f6]">
-              {work.year}
-            </span>
-          </div>
-          <p className="max-w-[14rem] font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
-            {work.title}
-          </p>
-        </div>
-      </div>
+    <article
+      className="rounded-[30px] border border-white/10 p-5 sm:p-6"
+      style={{
+        background:
+          "linear-gradient(160deg, rgba(84, 131, 179, 0.14), rgba(2, 16, 36, 0.58))"
+      }}
+    >
+      <YouTubeEmbed
+        className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
+        title={`${work.title} video`}
+        youtubeId={work.youtubeId}
+      />
 
       <div className="mt-5">
-        <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7da0ca]">
-          {work.client}
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7da0ca]">
+            {work.client}
+          </p>
+          <span className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.06)] px-3 py-1.5 text-[0.64rem] uppercase tracking-[0.22em] text-[#eff7ff]">
+            {work.format}
+          </span>
+        </div>
+
+        <h3 className="mt-4 font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
+          {work.title}
+        </h3>
         <p className="mt-4 text-base leading-8 text-[#c4d3e2]">{work.note}</p>
+
         <div className="mt-5 flex flex-wrap gap-2">
           {work.deliverables.map((deliverable) => (
             <span
-              className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.04)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
+              className="rounded-full border border-white/10 bg-[rgba(84,131,179,0.14)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
               key={deliverable}
             >
               {deliverable}
@@ -114,6 +116,10 @@ function ExpandedWorkCard({ item, work }: ExpandedWorkCardProps) {
 
 export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const accordionBackground =
+    "linear-gradient(160deg, rgba(5, 38, 89, 0.62), rgba(3, 18, 39, 0.92))";
+  const accordionGlow =
+    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.1), transparent 20%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)";
 
   return (
     <div className="space-y-6">
@@ -123,43 +129,50 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
         return (
           <motion.section
             animate={{ borderColor: isOpen ? "rgba(193,232,255,0.18)" : "rgba(255,255,255,0.08)" }}
-            className="floating-card rounded-[40px] border p-5 sm:p-6 lg:p-8"
+            className="relative overflow-hidden rounded-[40px] border border-white/10 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.45)] sm:p-6 lg:p-8"
             key={item.title}
             layout
+            style={{ background: accordionBackground }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
-            <button
-              aria-expanded={isOpen}
-              className="block w-full text-left"
-              onClick={() => setOpenIndex(isOpen ? null : index)}
-              type="button"
-            >
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{ background: accordionGlow }}
+            />
+            <div className="relative">
               <ProjectCover item={item} />
 
-              <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-                <div>
-                  <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#7da0ca]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h2 className="mt-5 max-w-4xl text-balance font-serif text-[2.5rem] leading-[0.94] text-mist sm:text-[3rem] lg:text-[3.45rem]">
-                    {item.title}
-                  </h2>
-                </div>
+              <button
+                aria-expanded={isOpen}
+                className="mt-6 block w-full text-left"
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+                type="button"
+              >
+                <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+                  <div>
+                    <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#7da0ca]">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h2 className="mt-5 max-w-4xl text-balance font-serif text-[2.5rem] leading-[0.94] text-mist sm:text-[3rem] lg:text-[3.45rem]">
+                      {item.title}
+                    </h2>
+                  </div>
 
-                <div className="flex items-end justify-between gap-4">
-                  <p className="max-w-xl text-[1rem] leading-8 text-[#c4d3e2]">
-                    {item.description}
-                  </p>
-                  <motion.span
-                    animate={{ rotate: isOpen ? 45 : 0 }}
-                    className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-white/10 bg-[rgba(255,255,255,0.04)] text-2xl text-[#eaf4ff]"
-                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    +
-                  </motion.span>
+                  <div className="flex items-end justify-between gap-4">
+                    <p className="max-w-xl text-[1rem] leading-8 text-[#c4d3e2]">
+                      {item.description}
+                    </p>
+                    <motion.span
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                      className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-white/10 bg-[rgba(255,255,255,0.04)] text-2xl text-[#eaf4ff]"
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      +
+                    </motion.span>
+                  </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
 
             <AnimatePresence initial={false}>
               {isOpen ? (
@@ -178,7 +191,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                       <div className="flex flex-wrap gap-2">
                         {item.highlights.map((highlight) => (
                           <span
-                            className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.04)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
+                            className="rounded-full border border-white/10 bg-[rgba(84,131,179,0.14)] px-3 py-2 text-[0.68rem] uppercase tracking-[0.18em] text-[#d7e6f6]"
                             key={highlight}
                           >
                             {highlight}
@@ -189,7 +202,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
 
                     <div className="grid gap-5 lg:grid-cols-2">
                       {item.works.map((work) => (
-                        <ExpandedWorkCard item={item} key={work.title} work={work} />
+                        <ExpandedWorkCard key={work.title} work={work} />
                       ))}
                     </div>
                   </div>

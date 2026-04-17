@@ -10,6 +10,7 @@ export type ProjectCategory = {
     note: string;
     title: string;
     year: string;
+    youtubeId: string;
   }[];
   year: string;
   category: string;
@@ -42,7 +43,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A social-first rollout built around sharp hooks, visual pacing, and quick product clarity.",
         title: "Summer Launch Series",
-        year: "2026"
+        year: "2026",
+        youtubeId: "dQw4w9WgXcQ"
       },
       {
         client: "Marlow Beauty",
@@ -51,7 +53,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "Short edits shaped for paid distribution with a cleaner luxury feel than typical direct-response content.",
         title: "Paid Social Retention Cuts",
-        year: "2025"
+        year: "2025",
+        youtubeId: "dQw4w9WgXcQ"
       },
       {
         client: "Northline Fitness",
@@ -60,7 +63,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A modular edit system for testing multiple intros while keeping the brand tone cohesive.",
         title: "Creator Promo System",
-        year: "2025"
+        year: "2025",
+        youtubeId: "dQw4w9WgXcQ"
       }
     ],
     year: "2026",
@@ -85,7 +89,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A structure-first edit balancing interviews, texture shots, and measured pacing for a premium final film.",
         title: "Founder Story Film",
-        year: "2026"
+        year: "2026",
+        youtubeId: "jNQXAC9IVRw"
       },
       {
         client: "Arc Vessel",
@@ -94,7 +99,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "Built for sustained attention with stronger rhythm changes and cleaner transitions between story beats.",
         title: "Mini Documentary Episode",
-        year: "2025"
+        year: "2025",
+        youtubeId: "jNQXAC9IVRw"
       },
       {
         client: "Studio Haven",
@@ -103,7 +109,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "Longer-form editing with emphasis on clarity, emotional build, and polished delivery across platforms.",
         title: "Case Study Feature",
-        year: "2025"
+        year: "2025",
+        youtubeId: "jNQXAC9IVRw"
       }
     ],
     year: "2026",
@@ -128,7 +135,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A restrained short film edit shaped around atmosphere, visual memory, and carefully paced reveals.",
         title: "Silent Tides",
-        year: "2026"
+        year: "2026",
+        youtubeId: "9bZkp7q19f0"
       },
       {
         client: "Artist Commission",
@@ -137,7 +145,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A cinematic short pairing performance footage with layered sound design and a sparse editorial rhythm.",
         title: "Glass Room",
-        year: "2025"
+        year: "2025",
+        youtubeId: "9bZkp7q19f0"
       },
       {
         client: "Personal Work",
@@ -146,7 +155,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "An image-led piece focused on tone, composition, and tension rather than overt exposition.",
         title: "Blue Hour",
-        year: "2025"
+        year: "2025",
+        youtubeId: "9bZkp7q19f0"
       }
     ],
     year: "2026",
@@ -171,7 +181,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A subtle sound pass that gave the film more scale and emotional texture without becoming overdesigned.",
         title: "Launch Sound World",
-        year: "2026"
+        year: "2026",
+        youtubeId: "3JZ_D3ELwOQ"
       },
       {
         client: "Luna Harbor",
@@ -180,7 +191,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A cleaner vocal mix and more controlled transitions designed for clarity across headphones and speakers.",
         title: "Narrative Audio Mix",
-        year: "2025"
+        year: "2025",
+        youtubeId: "3JZ_D3ELwOQ"
       },
       {
         client: "Motion Campaign",
@@ -189,7 +201,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A tailored effects and mix layer built to support a premium edit rather than overpower it.",
         title: "Campaign Sound Finish",
-        year: "2025"
+        year: "2025",
+        youtubeId: "3JZ_D3ELwOQ"
       }
     ],
     year: "2026",
@@ -214,7 +227,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A supporting design system created to make campaigns feel unified across video, stills, and rollout assets.",
         title: "Campaign Asset System",
-        year: "2026"
+        year: "2026",
+        youtubeId: "kJQP7kiw5Fk"
       },
       {
         client: "Mira House",
@@ -223,7 +237,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "Refined layouts and brand elements designed to sit naturally alongside motion and editorial work.",
         title: "Identity Extension Kit",
-        year: "2025"
+        year: "2025",
+        youtubeId: "kJQP7kiw5Fk"
       },
       {
         client: "North Coast",
@@ -232,7 +247,8 @@ export const projectCategories: ProjectCategory[] = [
         note:
           "A disciplined set of visual assets that carried the same tone across multiple launch touchpoints.",
         title: "Lookbook and Launch Assets",
-        year: "2025"
+        year: "2025",
+        youtubeId: "kJQP7kiw5Fk"
       }
     ],
     year: "2026",

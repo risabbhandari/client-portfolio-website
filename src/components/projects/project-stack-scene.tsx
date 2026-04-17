@@ -51,11 +51,6 @@ function ProjectStackItem({
   const settleEnd = Math.min(nextStart + entrySpan * 0.72, 1);
 
   const y = useTransform(progress, [start, end], [entryOffset + index * 48, finalOffset]);
-  const opacity = useTransform(
-    progress,
-    [Math.max(0, start - 0.035), start + 0.03, end],
-    [0, 0.56, 1]
-  );
   const scale =
     index === total - 1
       ? useTransform(progress, [start, end], [0.97, 1])
@@ -70,7 +65,7 @@ function ProjectStackItem({
     <motion.div
       className="absolute inset-x-0 top-0 origin-top [transform-style:preserve-3d]"
       style={{
-        opacity,
+        opacity: 1,
         rotateX,
         scale,
         y,
