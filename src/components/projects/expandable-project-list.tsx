@@ -116,10 +116,20 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
 
 export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const accordionBackground =
-    "linear-gradient(160deg, rgba(5, 38, 89, 0.62), rgba(3, 18, 39, 0.92))";
-  const accordionGlow =
-    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.1), transparent 20%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)";
+  const accordionBackgrounds = [
+    "linear-gradient(160deg, rgba(2, 16, 36, 0.98), rgba(5, 38, 89, 0.84))",
+    "linear-gradient(160deg, rgba(5, 38, 89, 0.92), rgba(84, 131, 179, 0.32))",
+    "linear-gradient(160deg, rgba(84, 131, 179, 0.54), rgba(2, 16, 36, 0.92))",
+    "linear-gradient(160deg, rgba(106, 144, 180, 0.5), rgba(2, 16, 36, 0.9))",
+    "linear-gradient(160deg, rgba(125, 160, 202, 0.36), rgba(2, 16, 36, 0.9))"
+  ];
+  const accordionGlows = [
+    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.1), transparent 20%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 82% 18%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 20% 18%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 78% 16%, rgba(193, 232, 255, 0.12), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)",
+    "radial-gradient(circle at 18% 16%, rgba(193, 232, 255, 0.14), transparent 18%), linear-gradient(150deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0) 30%)"
+  ];
 
   return (
     <div className="space-y-6">
@@ -132,12 +142,12 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
             className="relative overflow-hidden rounded-[40px] border border-white/10 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.45)] sm:p-6 lg:p-8"
             key={item.title}
             layout
-            style={{ background: accordionBackground }}
+            style={{ background: accordionBackgrounds[index % accordionBackgrounds.length] }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
             <div
               className="pointer-events-none absolute inset-0"
-              style={{ background: accordionGlow }}
+              style={{ background: accordionGlows[index % accordionGlows.length] }}
             />
             <div className="relative">
               <ProjectCover item={item} />

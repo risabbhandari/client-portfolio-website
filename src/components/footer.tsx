@@ -3,12 +3,10 @@ import Link from "next/link";
 import { navigationItems } from "@/data/site";
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="pb-8 pt-12 sm:pb-10">
       <div className="layout-shell">
-        <div className="border-t border-white/10 py-8">
+        <div className="blue-panel blue-panel-deep px-6 py-8 sm:px-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-xl">
               <p className="font-serif text-3xl text-mist">.amelie</p>

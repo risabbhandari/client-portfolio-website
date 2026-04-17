@@ -12,15 +12,34 @@ export function NitroProjectCard({
   mode = "projects"
 }: NitroProjectCardProps) {
   const isHome = mode === "home";
+  const shellBackgrounds = [
+    "linear-gradient(145deg, rgb(2, 16, 36), rgb(5, 38, 89))",
+    "linear-gradient(145deg, rgb(5, 38, 89), rgb(84, 131, 179))",
+    "linear-gradient(145deg, rgb(84, 131, 179), rgb(2, 16, 36))",
+    "linear-gradient(145deg, rgb(106, 144, 180), rgb(2, 16, 36))",
+    "linear-gradient(145deg, rgb(125, 160, 202), rgb(2, 16, 36))"
+  ];
+  const shellGlow = [
+    "radial-gradient(circle at 20% 18%, rgba(193, 232, 255, 0.14), transparent 18%)",
+    "radial-gradient(circle at 76% 16%, rgba(125, 160, 202, 0.16), transparent 18%)",
+    "radial-gradient(circle at 22% 22%, rgba(193, 232, 255, 0.12), transparent 18%)",
+    "radial-gradient(circle at 74% 20%, rgba(193, 232, 255, 0.12), transparent 18%)",
+    "radial-gradient(circle at 20% 16%, rgba(193, 232, 255, 0.14), transparent 18%)"
+  ];
 
   return (
     <article
-      className={`floating-card overflow-hidden rounded-[42px] border-white/8 bg-[rgb(3,18,39)] ${
+      className={`relative overflow-hidden rounded-[42px] border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.48)] ${
         isHome
           ? "min-h-[calc(100svh-11.25rem)] p-6 sm:p-8 lg:p-10"
           : "p-5 sm:p-6 lg:p-8"
       }`}
+      style={{ background: shellBackgrounds[index % shellBackgrounds.length] }}
     >
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{ background: shellGlow[index % shellGlow.length] }}
+      />
       <div
         className={`relative overflow-hidden rounded-[32px] border border-white/10 ${
           isHome ? "h-[48vh] min-h-[360px] max-h-[500px]" : "h-[320px] sm:h-[360px]"

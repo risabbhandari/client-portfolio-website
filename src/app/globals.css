@@ -103,11 +103,15 @@ a {
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#d2dbeb] transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:text-[#eef7ff];
+    @apply inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#d2dbeb] transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-white/20 hover:text-[#eef7ff];
+    background:
+      linear-gradient(145deg, rgba(5, 38, 89, 0.54), rgba(2, 16, 36, 0.7));
   }
 
   .soft-shell {
-    @apply border border-white/10 bg-[rgba(0,0,0,0.78)] shadow-[0_18px_70px_rgba(0,0,0,0.48)] backdrop-blur-xl;
+    @apply border border-white/10 shadow-[0_18px_70px_rgba(0,0,0,0.48)] backdrop-blur-xl;
+    background:
+      linear-gradient(180deg, rgba(2, 16, 36, 0.92), rgba(0, 0, 0, 0.9));
   }
 
   .floating-card {
@@ -132,7 +136,9 @@ a {
   }
 
   .nav-link-active {
-    @apply bg-white/10 text-[#f2f8ff];
+    @apply text-[#f2f8ff];
+    background:
+      linear-gradient(145deg, rgba(84, 131, 179, 0.24), rgba(2, 16, 36, 0.42));
   }
 
   .nav-cta {
@@ -154,6 +160,77 @@ a {
       linear-gradient(145deg, rgba(125, 160, 202, 0.32), rgba(2, 16, 36, 0.92));
     content: "";
     inset: 0;
+    position: absolute;
+  }
+
+  .page-shell {
+    @apply relative overflow-hidden rounded-[44px] border border-white/10 shadow-[0_32px_120px_rgba(0,0,0,0.42)];
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(2, 16, 36, 0.98));
+  }
+
+  .page-shell::before {
+    background:
+      radial-gradient(circle at 18% 10%, rgba(84, 131, 179, 0.18), transparent 24%),
+      radial-gradient(circle at 82% 14%, rgba(125, 160, 202, 0.12), transparent 24%),
+      linear-gradient(160deg, rgba(193, 232, 255, 0.05), rgba(1, 22, 43, 0) 28%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .blue-panel {
+    @apply relative overflow-hidden rounded-[34px] border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.38)];
+  }
+
+  .blue-panel::before {
+    background:
+      radial-gradient(circle at 24% 18%, rgba(193, 232, 255, 0.16), transparent 18%),
+      linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(1, 22, 43, 0) 28%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .blue-panel-deep {
+    background:
+      linear-gradient(145deg, rgba(2, 16, 36, 0.98), rgba(5, 38, 89, 0.82));
+  }
+
+  .blue-panel-surface {
+    background:
+      linear-gradient(145deg, rgba(5, 38, 89, 0.92), rgba(84, 131, 179, 0.34));
+  }
+
+  .blue-panel-muted {
+    background:
+      linear-gradient(145deg, rgba(84, 131, 179, 0.58), rgba(2, 16, 36, 0.9));
+  }
+
+  .blue-panel-mist {
+    background:
+      linear-gradient(145deg, rgba(106, 144, 180, 0.56), rgba(125, 160, 202, 0.26), rgba(2, 16, 36, 0.82));
+  }
+
+  .blue-panel-frost {
+    background:
+      linear-gradient(145deg, rgba(125, 160, 202, 0.42), rgba(193, 232, 255, 0.22), rgba(2, 16, 36, 0.8));
+  }
+
+  .blue-list-card {
+    @apply relative overflow-hidden rounded-[28px] border border-white/10;
+    background:
+      linear-gradient(145deg, rgba(5, 38, 89, 0.6), rgba(2, 16, 36, 0.72));
+  }
+
+  .blue-list-card::before {
+    background:
+      linear-gradient(145deg, rgba(193, 232, 255, 0.08), rgba(1, 22, 43, 0));
+    content: "";
+    inset: 0;
+    pointer-events: none;
     position: absolute;
   }
 }

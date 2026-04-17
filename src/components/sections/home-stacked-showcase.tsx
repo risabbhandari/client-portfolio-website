@@ -16,7 +16,7 @@ export function HomeStackedShowcase() {
   return (
     <>
       <section className="layout-shell pt-8 sm:pt-12 lg:hidden">
-        <div className="flex min-h-[72svh] flex-col justify-between">
+        <div className="blue-panel blue-panel-deep flex min-h-[72svh] flex-col justify-between px-6 py-8 sm:px-8 sm:py-10">
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
               <span className="text-[#eef6ff]">Hey, I&apos;m Amelie</span>
@@ -49,27 +49,24 @@ export function HomeStackedShowcase() {
           ))}
         </div>
 
-        <div className="section-divider mt-24">
+        <div className="mt-24">
           <Reveal amount={0.18} distance={30}>
-            <span className="eyebrow">.about</span>
-          </Reveal>
-          <Reveal delay={0.06} amount={0.18} distance={36}>
-            <p className="mt-8 max-w-4xl font-serif text-3xl leading-[1.08] text-mist sm:text-4xl">
-              {aboutPhilosophy}
-            </p>
+            <div className="blue-panel blue-panel-mist px-6 py-8 sm:px-8 sm:py-10">
+              <span className="eyebrow">.about</span>
+              <p className="mt-8 max-w-4xl font-serif text-3xl leading-[1.08] text-mist sm:text-4xl">
+                {aboutPhilosophy}
+              </p>
+              <div className="mt-10">
+                <Link className="secondary-button" href="/about-me">
+                  About Me
+                </Link>
+              </div>
+            </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.1} amount={0.18} distance={30}>
-          <div className="mt-10">
-            <Link className="secondary-button" href="/about-me">
-              About Me
-            </Link>
-          </div>
-        </Reveal>
-
         <Reveal delay={0.14} amount={0.18} distance={28}>
-          <div className="section-divider mt-24">
+          <div className="blue-panel blue-panel-surface mt-24 px-6 py-8 sm:px-8 sm:py-10">
             <span className="eyebrow">.say hello</span>
             <h2 className="mt-7 max-w-3xl font-serif text-4xl leading-[1] text-mist sm:text-5xl">
               i&apos;m open for freelance projects, feel free to email me to see
@@ -92,7 +89,7 @@ export function HomeStackedShowcase() {
           mode="home"
           sceneHeightPerItem={132}
           overlay={
-            <div className="flex min-h-[calc(100svh-7.25rem)] flex-col justify-between pt-8">
+            <div className="blue-panel blue-panel-deep flex min-h-[calc(100svh-7.25rem)] max-w-[72rem] flex-col justify-between px-8 py-10 xl:px-10 xl:py-12">
               <div>
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
@@ -126,13 +123,13 @@ export function HomeStackedShowcase() {
         <div className="section-space pt-16">
           <div className="grid gap-10 xl:grid-cols-[0.42fr_0.58fr]">
             <Reveal amount={0.18} distance={32}>
-              <div>
+              <div className="blue-panel blue-panel-mist h-full px-8 py-10">
                 <span className="eyebrow">.about</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.06} amount={0.18} distance={36}>
-              <div>
+              <div className="blue-panel blue-panel-frost px-8 py-10">
                 <p className="max-w-4xl font-serif text-[2.45rem] leading-[1.05] text-mist xl:text-[3.2rem]">
                   {aboutPhilosophy}
                 </p>
@@ -146,7 +143,7 @@ export function HomeStackedShowcase() {
           </div>
 
           <Reveal delay={0.14} amount={0.18} distance={34}>
-            <div className="section-divider mt-28">
+            <div className="blue-panel blue-panel-surface mt-28 px-8 py-10 xl:px-10 xl:py-12">
               <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr]">
                 <div>
                   <span className="eyebrow">.say hello</span>
