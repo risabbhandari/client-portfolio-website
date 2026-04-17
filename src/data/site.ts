@@ -10,7 +10,7 @@ export type ProjectCategory = {
     note: string;
     title: string;
     year: string;
-    youtubeId: string;
+    videoSource: string;
   }[];
   year: string;
   category: string;
@@ -41,30 +41,30 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Launch reel", "Cutdowns", "Caption pack"],
         format: "Vertical campaign edits",
         note:
-          "A social-first rollout built around sharp hooks, visual pacing, and quick product clarity.",
-        title: "Summer Launch Series",
+          "A short promo edit highlighting the FTVP program through quick, student-focused moments.",
+        title: "School of Communications - FTVP Short",
         year: "2026",
-        youtubeId: "dQw4w9WgXcQ"
+        videoSource: "https://drive.google.com/file/d/1GXi2gRJ6I1-O1uRNbQV4A0jP7GP7xEDC/view"
       },
       {
         client: "Marlow Beauty",
         deliverables: ["UGC edit", "Paid social cut", "Retention pass"],
         format: "Performance-led short video",
         note:
-          "Short edits shaped for paid distribution with a cleaner luxury feel than typical direct-response content.",
-        title: "Paid Social Retention Cuts",
+          "A fast-cut Twitch highlight shaped for quick engagement and clean short-form pacing.",
+        title: "Twitch Stream - Short",
         year: "2025",
-        youtubeId: "dQw4w9WgXcQ"
+        videoSource: "https://drive.google.com/file/d/1mRXDQ5-RC_p755QdzSNYDYBEW4-4Me-z/view"
       },
       {
-        client: "Northline Fitness",
+        client: "Twitch Stream 2",
         deliverables: ["Creator edit", "Story set", "Alt openings"],
-        format: "Creator-led promo assets",
+        format: "Twitch Stream 2",
         note:
-          "A modular edit system for testing multiple intros while keeping the brand tone cohesive.",
-        title: "Creator Promo System",
+          "A second Twitch short focused on tighter beats, clearer reactions, and snappier pacing.",
+        title: "Twitch Stream - Short 2",
         year: "2025",
-        youtubeId: "dQw4w9WgXcQ"
+        videoSource: "https://drive.google.com/file/d/1INcI2X_-NNVGbqJBCr7fPBrfTzMFZQYY/view"
       }
     ],
     year: "2026",
@@ -87,31 +87,61 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Hero film edit", "Trailer", "YouTube version"],
         format: "Long-form brand storytelling",
         note:
-          "A structure-first edit balancing interviews, texture shots, and measured pacing for a premium final film.",
-        title: "Founder Story Film",
+          "A comedy-focused edit built around timing, reaction beats, and clean transitions.",
+        title: "Comedy - Edit",
         year: "2026",
-        youtubeId: "jNQXAC9IVRw"
+        videoSource: "https://drive.google.com/file/d/1inoaIkX13yrJUDT3zxOU2zxiUMMUmUX2/view"
       },
       {
         client: "Arc Vessel",
         deliverables: ["Episode edit", "Teaser cut", "Social trims"],
         format: "Narrative documentary edit",
         note:
-          "Built for sustained attention with stronger rhythm changes and cleaner transitions between story beats.",
-        title: "Mini Documentary Episode",
+          "A dialogue-driven scene edit centered on pacing, performance rhythm, and conversational clarity.",
+        title: "Dialouge - Edit",
         year: "2025",
-        youtubeId: "jNQXAC9IVRw"
+        videoSource: "https://drive.google.com/file/d/1G3KO9UhAruYCxRAOtw75A25niPVgKr_t/view?usp=drive_link"
       },
       {
         client: "Studio Haven",
         deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
         format: "Case study editorial",
         note:
-          "Longer-form editing with emphasis on clarity, emotional build, and polished delivery across platforms.",
-        title: "Case Study Feature",
+          "A documentary-style edit shaped with clear structure, natural pacing, and story continuity.",
+        title: "Documentary Edit",
         year: "2025",
-        youtubeId: "jNQXAC9IVRw"
-      }
+        videoSource: "https://drive.google.com/file/d/1sXcD_HtBTqt6mlvCTzeyT8q2Rrjv89E4/view?usp=drive_link"
+      },
+      {
+        client: "Studio Haven",
+        deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
+        format: "Case study editorial",
+        note:
+          "A comedic Doritos ad edit with punchy timing, product emphasis, and a clear branded payoff.",
+        title: "Doritos - Comedy Ad",
+        year: "2025",
+        videoSource: "https://drive.google.com/file/d/1kjsMTFN56BcHYsDuoJW_9e-xoOnZYYWq/view?usp=drive_link"
+      },
+      {
+        client: "Studio Haven",
+        deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
+        format: "Case study editorial",
+        note:
+          "A polished FTVP program video featuring student work, campus moments, and academic storytelling.",
+        title: "School of Communications - FTVP Video",
+        year: "2025",
+        videoSource: "https://drive.google.com/file/d/1dsyUNvjsm_G3RO9zELkb6w1ECIZISoha/view?usp=drive_link"
+      },
+      {
+        client: "Studio Haven",
+        deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
+        format: "Case study editorial",
+        note:
+          "A dramatic scene edit designed to build tension, support performance, and keep the story clear.",
+        title: "The Bully - Edit",
+        year: "2025",
+        videoSource: "https://drive.google.com/file/d/1HAUq_Gb5-aDn7q5mSn9L13GZjyzKq-3D/view?usp=drive_link"
+      },
     ],
     year: "2026",
     category: "Editorial Film",
@@ -133,30 +163,30 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Festival cut", "Trailer", "Sound pass"],
         format: "Narrative short film",
         note:
-          "A restrained short film edit shaped around atmosphere, visual memory, and carefully paced reveals.",
-        title: "Silent Tides",
+          "A narrative short centered on character energy, scene flow, and a polished cinematic finish.",
+        title: "Booksmart",
         year: "2026",
-        youtubeId: "9bZkp7q19f0"
+        videoSource: "https://drive.google.com/file/d/1vqEkRXQR8SLPAn9aB_akrBUrODWHz1Mj/view?usp=drive_link"
       },
       {
         client: "Artist Commission",
         deliverables: ["Performance film", "Title sequence", "Master export"],
         format: "Poetic visual short",
         note:
-          "A cinematic short pairing performance footage with layered sound design and a sparse editorial rhythm.",
-        title: "Glass Room",
+          "An in-class short exploring contrast in pace and mood through controlled editing and rhythm.",
+        title: "Rush or Relaxed ? - In-class project",
         year: "2025",
-        youtubeId: "9bZkp7q19f0"
+        videoSource: "https://drive.google.com/file/d/1IqUjq4DEfkY9Sm-02qN17HJLQUFBe5Fp/view?usp=drive_link"
       },
       {
         client: "Personal Work",
         deliverables: ["Director's cut", "Still pull set", "Screening version"],
         format: "Experimental short",
         note:
-          "An image-led piece focused on tone, composition, and tension rather than overt exposition.",
-        title: "Blue Hour",
+          "A concept-driven short built around voice, atmosphere, and restrained visual storytelling.",
+        title: "The Voice",
         year: "2025",
-        youtubeId: "9bZkp7q19f0"
+        videoSource: "https://drive.google.com/file/d/1orzjhh_9hm3wsjOHmzGgstJscFpYeJ9i/view?usp=drive_link"
       }
     ],
     year: "2026",
@@ -179,31 +209,22 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Sound design", "Mix", "Broadcast master"],
         format: "Brand soundscape package",
         note:
-          "A subtle sound pass that gave the film more scale and emotional texture without becoming overdesigned.",
-        title: "Launch Sound World",
+          "A sound design piece built around layered raindrop effects, ambience, and natural spatial detail.",
+        title: "Raindrop - SFX",
         year: "2026",
-        youtubeId: "3JZ_D3ELwOQ"
+        videoSource: "https://drive.google.com/file/d/1W6q9WRdskHGCjmCtAtqJvrN_NInudtar/view?usp=drive_link"
       },
       {
         client: "Luna Harbor",
         deliverables: ["Podcast mix", "Trailer audio", "Cleanup pass"],
         format: "Voice-led audio production",
         note:
-          "A cleaner vocal mix and more controlled transitions designed for clarity across headphones and speakers.",
-        title: "Narrative Audio Mix",
+          "A cinematic SFX exercise focused on impact, machinery, and tension-building audio detail.",
+        title: "Terminator - SFX",
         year: "2025",
-        youtubeId: "3JZ_D3ELwOQ"
+        videoSource: "https://drive.google.com/file/d/1Xx3M70RE9yScDyq7p0WQxd1REpX_vaV9/view?usp=drive_link"
       },
-      {
-        client: "Motion Campaign",
-        deliverables: ["Transition effects", "Low-end treatment", "Final stems"],
-        format: "Sound design support",
-        note:
-          "A tailored effects and mix layer built to support a premium edit rather than overpower it.",
-        title: "Campaign Sound Finish",
-        year: "2025",
-        youtubeId: "3JZ_D3ELwOQ"
-      }
+      
     ],
     year: "2026",
     category: "Sound World",
@@ -225,31 +246,13 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Title cards", "Social assets", "Campaign layouts"],
         format: "Motion support design",
         note:
-          "A supporting design system created to make campaigns feel unified across video, stills, and rollout assets.",
-        title: "Campaign Asset System",
+          "A motion tracking piece that locks title graphics into a New York City scene with clean integration.",
+        title: "Title NYC - Motion Tracking",
         year: "2026",
-        youtubeId: "kJQP7kiw5Fk"
+        videoSource: "https://drive.google.com/file/d/1iVY1QS5zKD5ZXIDv7sFWZlfXztc-5BwZ/view?usp=drive_link"
       },
-      {
-        client: "Mira House",
-        deliverables: ["Identity refinements", "Pitch deck visuals", "Story frames"],
-        format: "Visual identity support",
-        note:
-          "Refined layouts and brand elements designed to sit naturally alongside motion and editorial work.",
-        title: "Identity Extension Kit",
-        year: "2025",
-        youtubeId: "kJQP7kiw5Fk"
-      },
-      {
-        client: "North Coast",
-        deliverables: ["Lookbook layouts", "Motion frames", "Digital assets"],
-        format: "Brand presentation design",
-        note:
-          "A disciplined set of visual assets that carried the same tone across multiple launch touchpoints.",
-        title: "Lookbook and Launch Assets",
-        year: "2025",
-        youtubeId: "kJQP7kiw5Fk"
-      }
+      
+      
     ],
     year: "2026",
     category: "Design Support",

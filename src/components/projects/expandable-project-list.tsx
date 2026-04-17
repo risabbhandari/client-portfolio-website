@@ -9,13 +9,81 @@ type ExpandableProjectListProps = {
   items: ProjectCategory[];
 };
 
-type YouTubeEmbedProps = {
+type ProjectVideoEmbedProps = {
   className?: string;
   title: string;
-  youtubeId: string;
+  videoSource: string;
 };
 
-function YouTubeEmbed({ className, title, youtubeId }: YouTubeEmbedProps) {
+function getGoogleDriveEmbedUrl(videoSource: string) {
+  try {
+    const url = new URL(videoSource);
+    const pathSegments = url.pathname.split("/").filter(Boolean);
+    const fileSegmentIndex = pathSegments.indexOf("d");
+
+    if (fileSegmentIndex > -1 && pathSegments[fileSegmentIndex + 1]) {
+      return `https://drive.google.com/file/d/${pathSegments[fileSegmentIndex + 1]}/preview`;
+    }
+
+    const queryId = url.searchParams.get("id");
+    if (queryId) {
+      return `https://drive.google.com/file/d/${queryId}/preview`;
+    }
+  } catch {
+    if (/^[A-Za-z0-9_-]{20,}$/.test(videoSource)) {
+      return `https://drive.google.com/file/d/${videoSource}/preview`;
+    }
+  }
+
+  return null;
+}
+
+function getYouTubeEmbedUrl(videoSource: string) {
+  try {
+    const url = new URL(videoSource);
+
+    if (url.hostname.includes("youtu.be")) {
+      const videoId = url.pathname.replace(/^\/+/, "");
+      return videoId
+        ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`
+        : null;
+    }
+
+    if (url.hostname.includes("youtube.com")) {
+      if (url.pathname.startsWith("/embed/")) {
+        const videoId = url.pathname.split("/embed/")[1]?.split("/")[0];
+        return videoId
+          ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`
+          : null;
+      }
+
+      const videoId = url.searchParams.get("v");
+      return videoId
+        ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`
+        : null;
+    }
+  } catch {
+    if (/^[A-Za-z0-9_-]{11}$/.test(videoSource)) {
+      return `https://www.youtube-nocookie.com/embed/${videoSource}?rel=0&modestbranding=1`;
+    }
+  }
+
+  return null;
+}
+
+function getProjectVideoEmbedUrl(videoSource: string) {
+  return (
+    getGoogleDriveEmbedUrl(videoSource) ??
+    getYouTubeEmbedUrl(videoSource) ??
+    videoSource
+  );
+}
+
+function ProjectVideoEmbed({
+  className,
+  title,
+  videoSource
+}: ProjectVideoEmbedProps) {
   return (
     <div className={className}>
       <iframe
@@ -24,7 +92,7 @@ function YouTubeEmbed({ className, title, youtubeId }: YouTubeEmbedProps) {
         className="absolute inset-0 h-full w-full"
         loading="lazy"
         referrerPolicy="strict-origin-when-cross-origin"
-        src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&modestbranding=1`}
+        src={getProjectVideoEmbedUrl(videoSource)}
         title={title}
       />
     </div>
@@ -41,13 +109,13 @@ function ProjectCover({ item }: ProjectCoverProps) {
 
   return (
     <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[rgba(2,16,36,0.56)] p-4 sm:p-5">
-      <YouTubeEmbed
+      <ProjectVideoEmbed
         className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
         title={`${item.title} featured video`}
-        youtubeId={primaryWork.youtubeId}
+        videoSource={primaryWork.videoSource}
       />
 
-      <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
+      <div className="mt-4">
         <div>
           <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#dbe8f4]">
             {item.subtitle}
@@ -56,9 +124,6 @@ function ProjectCover({ item }: ProjectCoverProps) {
             {primaryWork.title}
           </p>
         </div>
-        <span className="rounded-full border border-white/15 bg-[rgba(255,255,255,0.06)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eff7ff]">
-          {item.year}
-        </span>
       </div>
 
     </div>
@@ -78,23 +143,14 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
           "linear-gradient(160deg, rgba(84, 131, 179, 0.14), rgba(2, 16, 36, 0.58))"
       }}
     >
-      <YouTubeEmbed
+      <ProjectVideoEmbed
         className="relative aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(1,22,43,0.86)]"
         title={`${work.title} video`}
-        youtubeId={work.youtubeId}
+        videoSource={work.videoSource}
       />
 
       <div className="mt-5">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7da0ca]">
-            {work.client}
-          </p>
-          <span className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.06)] px-3 py-1.5 text-[0.64rem] uppercase tracking-[0.22em] text-[#eff7ff]">
-            {work.format}
-          </span>
-        </div>
-
-        <h3 className="mt-4 font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
+        <h3 className="font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
           {work.title}
         </h3>
         <p className="mt-4 text-base leading-8 text-[#c4d3e2]">{work.note}</p>
