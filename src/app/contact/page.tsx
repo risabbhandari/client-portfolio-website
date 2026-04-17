@@ -68,7 +68,7 @@ export default function ContactPage() {
                   ))}
                 </div>
                 <div className="mt-8">
-                  <Link className="primary-button" href="mailto:hello@amelie.studio">
+                  <Link className="primary-button" href="mailto:amelievillena@webster.edu">
                     Email Amelie
                   </Link>
                 </div>
