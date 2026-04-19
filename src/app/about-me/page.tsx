@@ -201,13 +201,9 @@ export default function AboutPage() {
     <section className="layout-shell section-space pt-12">
       <div className="page-shell px-6 py-10 sm:px-8 lg:px-10 lg:py-12">
         <div className="relative z-10">
-          <Reveal amount={0.24} distance={34}>
-            <span className="eyebrow">about me</span>
-          </Reveal>
-
           <Reveal delay={0.05} amount={0.24} distance={38}>
-            <h1 className="mt-7 max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.1rem]">
-              about me
+            <h1 className="max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.1rem]">
+              About Me
             </h1>
           </Reveal>
 
@@ -253,9 +249,8 @@ export default function AboutPage() {
           <Reveal delay={0.12} amount={0.18} distance={30}>
             <div className="section-divider mt-16">
               <div className="blue-panel blue-panel-muted px-8 py-8 sm:px-10 sm:py-10">
-                <span className="eyebrow">skills</span>
-                <h2 className="mt-5 font-serif text-4xl leading-[0.98] text-mist sm:text-5xl">
-                  skills
+                <h2 className="font-serif text-4xl leading-[0.98] text-mist sm:text-5xl">
+                  Skills
                 </h2>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">

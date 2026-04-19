@@ -22,10 +22,10 @@ const contactMethods: ContactMethod[] = [
     value: "amelievillena@webster.edu"
   },
   {
-    href: "https://www.linkedin.com/in/ameliecreates/",
+    href: "https://www.linkedin.com/in/amelie-villena/",
     icon: "linkedin",
     label: "LinkedIn",
-    value: "linkedin.com/in/ameliecreates"
+    value: "https://www.linkedin.com/in/amelie-villena/"
   }
 ];
 
@@ -77,18 +77,14 @@ export default function ContactPage() {
     <section className="layout-shell section-space pt-12">
       <div className="page-shell px-6 py-10 sm:px-8 lg:px-10 lg:py-12">
         <div className="relative z-10">
-          <Reveal amount={0.24} distance={34}>
-            <span className="eyebrow">contact</span>
-          </Reveal>
-
           <Reveal delay={0.05} amount={0.24} distance={38}>
-            <h1 className="mt-7 max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.1rem]">
-              contact
+            <h1 className="max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.1rem]">
+              Contact
             </h1>
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-[#ced8e4]">
+            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-white">
               <p>
                 I am always open to new opportunities and collaborations.
                 Whether you have a project in mind, want to discuss potential
@@ -111,10 +107,10 @@ export default function ContactPage() {
                 >
                   <ContactIcon icon={method.icon} />
                   <div>
-                    <p className="text-[0.72rem] uppercase tracking-[0.3em] text-[#d8e2ee]">
+                    <p className="text-[0.82rem] text-white/88">
                       {method.label}
                     </p>
-                    <p className="mt-2 text-base text-[#f5f9fc] sm:text-lg">
+                    <p className="mt-2 text-base text-white sm:text-lg">
                       {method.value}
                     </p>
                   </div>

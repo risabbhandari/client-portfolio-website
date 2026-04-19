@@ -251,7 +251,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                   <div className="mt-8 border-t border-[#d2dbeb]/16 pt-8">
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
                       <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#94a2bf]">
-                        selected work
+                        Selected Work
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {item.highlights.map((highlight) => (

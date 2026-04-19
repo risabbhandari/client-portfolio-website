@@ -347,8 +347,8 @@ export const strengths = [
 export const contactLinks = [
   {
     label: "Email",
-    value: "hello@amelie.studio",
-    href: "mailto:hello@amelie.studio"
+    value: "amelievillena@webster.edu",
+    href: "mailto:amelievillena@webster.edu"
   },
   {
     label: "Instagram",
@@ -362,8 +362,8 @@ export const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ameliecreates",
-    href: "https://www.linkedin.com/in/ameliecreates/"
+    value: "https://www.linkedin.com/in/amelie-villena/",
+    href: "https://www.linkedin.com/in/amelie-villena/"
   }
 ];
 

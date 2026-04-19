@@ -26,7 +26,7 @@ export function HomeStackedShowcase() {
           <Reveal delay={0.06} amount={0.24} distance={42}>
             <div className="mt-10 space-y-2">
               <p className="text-[0.92rem] uppercase tracking-[0.3em] text-[#94a2bf]">
-                creative portfolio
+                Creative Portfolio
               </p>
               <h1 className="max-w-4xl text-balance font-serif text-5xl leading-[0.9] text-mist sm:text-6xl">
                 {heroLines[0]}
@@ -52,8 +52,7 @@ export function HomeStackedShowcase() {
         <div className="mt-24">
           <Reveal amount={0.18} distance={30}>
             <div className="blue-panel blue-panel-mist px-6 py-8 sm:px-8 sm:py-10">
-              <span className="eyebrow">.about</span>
-              <p className="mt-8 max-w-4xl font-serif text-3xl leading-[1.08] text-mist sm:text-4xl">
+              <p className="max-w-4xl font-serif text-3xl leading-[1.08] text-mist sm:text-4xl">
                 {aboutPhilosophy}
               </p>
               <div className="mt-10">
@@ -67,10 +66,9 @@ export function HomeStackedShowcase() {
 
         <Reveal delay={0.14} amount={0.18} distance={28}>
           <div className="blue-panel blue-panel-surface mt-24 px-6 py-8 sm:px-8 sm:py-10">
-            <span className="eyebrow">.say hello</span>
-            <h2 className="mt-7 max-w-3xl font-serif text-4xl leading-[1] text-mist sm:text-5xl">
-              i&apos;m open for freelance projects, feel free to email me to see
-              how can we collaborate
+            <h2 className="max-w-3xl font-serif text-4xl leading-[1] text-mist sm:text-5xl">
+              I&apos;m open for freelance projects. Feel free to email me to see
+              how we can collaborate.
             </h2>
             <div className="mt-8">
               <Link className="secondary-button" href={contactLinks[0]?.href ?? "/contact"}>
@@ -100,7 +98,7 @@ export function HomeStackedShowcase() {
                 <Reveal delay={0.06} amount={0.3} distance={40}>
                   <div className="mt-10 max-w-6xl space-y-3">
                     <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#94a2bf]">
-                      creative portfolio
+                      Creative Portfolio
                     </p>
                     <h1 className="max-w-6xl text-balance font-serif text-[5.7rem] leading-[0.9] text-mist xl:text-[6.8rem]">
                       {heroLines[0]}
@@ -121,13 +119,7 @@ export function HomeStackedShowcase() {
         />
 
         <div className="section-space pt-16">
-          <div className="grid gap-10 xl:grid-cols-[0.42fr_0.58fr]">
-            <Reveal amount={0.18} distance={32}>
-              <div className="blue-panel blue-panel-mist h-full px-8 py-10">
-                <span className="eyebrow">.about</span>
-              </div>
-            </Reveal>
-
+          <div>
             <Reveal delay={0.06} amount={0.18} distance={36}>
               <div className="blue-panel blue-panel-frost px-8 py-10">
                 <p className="max-w-4xl font-serif text-[2.45rem] leading-[1.05] text-mist xl:text-[3.2rem]">
@@ -144,24 +136,18 @@ export function HomeStackedShowcase() {
 
           <Reveal delay={0.14} amount={0.18} distance={34}>
             <div className="blue-panel blue-panel-surface mt-28 px-8 py-10 xl:px-10 xl:py-12">
-              <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr]">
-                <div>
-                  <span className="eyebrow">.say hello</span>
-                </div>
-
-                <div>
-                  <h2 className="max-w-4xl font-serif text-5xl leading-[0.98] text-mist xl:text-[5.8rem]">
-                    i&apos;m open for freelance projects, feel free to email me
-                    to see how can we collaborate
-                  </h2>
-                  <div className="mt-10">
-                    <Link
-                      className="secondary-button"
-                      href={contactLinks[0]?.href ?? "/contact"}
-                    >
-                      Contact Me
-                    </Link>
-                  </div>
+              <div>
+                <h2 className="max-w-4xl font-serif text-5xl leading-[0.98] text-mist xl:text-[5.8rem]">
+                  I&apos;m open for freelance projects. Feel free to email me to
+                  see how we can collaborate.
+                </h2>
+                <div className="mt-10">
+                  <Link
+                    className="secondary-button"
+                    href={contactLinks[0]?.href ?? "/contact"}
+                  >
+                    Contact Me
+                  </Link>
                 </div>
               </div>
             </div>
