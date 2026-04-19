@@ -158,7 +158,7 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
-    cardImage: "/images/shortfilms.webp",
+    cardImage: "/images/shortfilm.jpg",
     sectionId: "short-films",
     title: "Short Films",
     subtitle: "Cinematic Storytelling",
@@ -206,7 +206,7 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
-    cardImage: "/images/audioproduction.webp",
+    cardImage: "/images/audioproduction.jpeg",
     sectionId: "audio-production",
     title: "Audio Production",
     subtitle: "Sound Design & Mixing",

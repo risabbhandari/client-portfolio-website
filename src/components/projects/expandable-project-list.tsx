@@ -12,6 +12,7 @@ type ExpandableProjectListProps = {
 type ProjectVideoEmbedProps = {
   className?: string;
   deferMountMs?: number;
+  iframeClassName?: string;
   title: string;
   videoSource: string;
 };
@@ -83,6 +84,7 @@ function getProjectVideoEmbedUrl(videoSource: string) {
 function ProjectVideoEmbed({
   className,
   deferMountMs = 0,
+  iframeClassName,
   title,
   videoSource
 }: ProjectVideoEmbedProps) {
@@ -111,7 +113,7 @@ function ProjectVideoEmbed({
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className="absolute inset-0 h-full w-full"
+          className={`absolute inset-0 h-full w-full border-0 ${iframeClassName ?? ""}`}
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
           src={getProjectVideoEmbedUrl(videoSource)}
@@ -139,14 +141,26 @@ type ProjectCoverProps = {
 function ProjectCover({ item }: ProjectCoverProps) {
   const featured = item.works.slice(0, 3);
   const primaryWork = featured[0];
+  const isPortraitCategory = item.sectionId === "short-form-content";
 
   return (
     <div className="space-y-4">
-      <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px]"
-        title={`${item.title} featured video`}
-        videoSource={primaryWork.videoSource}
-      />
+      {isPortraitCategory ? (
+        <div className="mx-auto w-full max-w-[18.75rem] rounded-[28px] bg-[rgba(1,22,43,0.28)] p-2">
+          <ProjectVideoEmbed
+            className="relative aspect-[9/16] overflow-hidden rounded-[22px]"
+            iframeClassName="left-1/2 top-1/2 h-[101%] w-[calc(100%+18px)] -translate-x-1/2 -translate-y-1/2"
+            title={`${item.title} featured video`}
+            videoSource={primaryWork.videoSource}
+          />
+        </div>
+      ) : (
+        <ProjectVideoEmbed
+          className="relative aspect-video overflow-hidden rounded-[24px]"
+          title={`${item.title} featured video`}
+          videoSource={primaryWork.videoSource}
+        />
+      )}
 
       <div>
         <div>
@@ -163,10 +177,14 @@ function ProjectCover({ item }: ProjectCoverProps) {
 }
 
 type ExpandedWorkCardProps = {
+  isPortraitCategory?: boolean;
   work: ProjectCategory["works"][number];
 };
 
-function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
+function ExpandedWorkCard({
+  isPortraitCategory = false,
+  work
+}: ExpandedWorkCardProps) {
   return (
     <article
       className="rounded-[30px] border border-[#d2dbeb]/16 p-5 sm:p-6"
@@ -175,12 +193,24 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
           "linear-gradient(160deg, rgba(148, 162, 191, 0.14), rgba(1, 22, 43, 0.58))"
       }}
     >
-      <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px]"
-        deferMountMs={260}
-        title={`${work.title} video`}
-        videoSource={work.videoSource}
-      />
+      {isPortraitCategory ? (
+        <div className="mx-auto w-full max-w-[16.75rem] rounded-[28px] bg-[rgba(1,22,43,0.28)] p-2">
+          <ProjectVideoEmbed
+            className="relative aspect-[9/16] overflow-hidden rounded-[22px]"
+            deferMountMs={260}
+            iframeClassName="left-1/2 top-1/2 h-[101%] w-[calc(100%+18px)] -translate-x-1/2 -translate-y-1/2"
+            title={`${work.title} video`}
+            videoSource={work.videoSource}
+          />
+        </div>
+      ) : (
+        <ProjectVideoEmbed
+          className="relative aspect-video overflow-hidden rounded-[24px]"
+          deferMountMs={260}
+          title={`${work.title} video`}
+          videoSource={work.videoSource}
+        />
+      )}
 
       <div className="mt-5">
         <h3 className="font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
@@ -247,6 +277,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
     <div className="space-y-6">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
+        const isPortraitCategory = item.sectionId === "short-form-content";
 
         return (
           <motion.section
@@ -334,7 +365,11 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
 
                     <div className="grid gap-5 lg:grid-cols-2">
                       {item.works.map((work) => (
-                        <ExpandedWorkCard key={work.title} work={work} />
+                        <ExpandedWorkCard
+                          isPortraitCategory={isPortraitCategory}
+                          key={work.title}
+                          work={work}
+                        />
                       ))}
                     </div>
                   </div>
