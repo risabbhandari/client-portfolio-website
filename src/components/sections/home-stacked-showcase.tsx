@@ -20,7 +20,7 @@ export function HomeStackedShowcase() {
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3">
               <span className="font-serif text-[1.45rem] leading-none text-mist sm:text-[1.9rem]">
-                Hey, I&apos;m Amelie
+                Hey, I&apos;m Amélie
               </span>
             </div>
           </Reveal>
@@ -91,7 +91,7 @@ export function HomeStackedShowcase() {
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="font-serif text-[1.7rem] leading-none text-mist xl:text-[2.15rem]">
-                      Hey, I&apos;m Amelie
+                      Hey, I&apos;m Amélie
                     </span>
                   </div>
                 </Reveal>

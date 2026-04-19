@@ -15,8 +15,8 @@ const bropella = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Amelie | Motion-Led Creative Portfolio",
-    template: "%s | Amelie"
+    default: "Amélie | Motion-Led Creative Portfolio",
+    template: "%s | Amélie"
   },
   description:
     "A premium portfolio for motion-led storytelling, short-form content, short films, sound design, and graphic assets."

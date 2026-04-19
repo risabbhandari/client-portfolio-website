@@ -219,7 +219,7 @@ export default function AboutPage() {
               <div className="flex justify-center lg:justify-start">
                 <div className="relative aspect-square w-full max-w-[24rem] overflow-hidden rounded-full border border-[#d2dbeb]/18 bg-[rgba(255,255,255,0.08)] shadow-[0_24px_80px_rgba(1,22,43,0.26)]">
                   <Image
-                    alt="Portrait of Amelie"
+                    alt="Portrait of Amélie"
                     className="object-cover"
                     fill
                     priority

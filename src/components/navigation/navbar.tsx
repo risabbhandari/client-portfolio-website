@@ -18,7 +18,7 @@ export function Navbar() {
               href="/"
             >
               <span className="font-serif text-[1.4rem] tracking-[0.08em] text-abyss">
-                .amelie
+                .amélie
               </span>
             </Link>
 

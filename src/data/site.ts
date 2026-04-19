@@ -37,7 +37,7 @@ export const projectCategories: ProjectCategory[] = [
     title: "Short-Form Content",
     subtitle: "Reels, TikTok, Shorts",
     description:
-      "Platform-native edits designed for retention, pace, and polish. Every cut is shaped to feel immediate without sacrificing taste.",
+      "Short-form edits designed for social media, shaped for pace, attention, and visual flow to draw and hold attention, while maintaining clarity and intention.",
     highlights: ["Hook-led pacing", "Caption styling", "Audience-first rhythm"],
     works: [
       {
@@ -85,7 +85,7 @@ export const projectCategories: ProjectCategory[] = [
     title: "Video Editing",
     subtitle: "Long-form / Narrative Edits",
     description:
-      "Longer edits with clean structure, tonal control, and a strong emotional arc. Built for clarity, texture, and sustained attention.",
+      "Long-form video edits focused on narrative and structure, shaped through pacing, sound, and visual flow to support story with clarity and direction.",
     highlights: ["Narrative shaping", "Pacing refinement", "Visual continuity"],
     works: [
       {
@@ -327,7 +327,7 @@ export const principles = [
 ];
 
 export const aboutStory =
-  "Amelie is a multidisciplinary creative focused on editing, motion-led storytelling, sound, and visual identity. The practice is shaped by a love of cinematic pacing, clear structure, and work that feels polished without becoming cold.";
+  "Amélie is a multidisciplinary creative focused on editing, motion-led storytelling, sound, and visual identity. The practice is shaped by a love of cinematic pacing, clear structure, and work that feels polished without becoming cold.";
 
 export const aboutPhilosophy =
   "The goal is to make every piece feel calm, intentional, and emotionally legible. Whether the format is a short reel or a short film, the process stays grounded in restraint, rhythm, and careful finishing.";

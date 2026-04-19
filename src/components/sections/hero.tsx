@@ -11,7 +11,7 @@ export function Hero() {
           <Reveal>
             <div className="flex flex-wrap items-center gap-3">
               <span className="font-serif text-[1.7rem] leading-none text-mist sm:text-[1.95rem]">
-                Hey, I&apos;m Amelie
+                Hey, I&apos;m Amélie
               </span>
             </div>
           </Reveal>

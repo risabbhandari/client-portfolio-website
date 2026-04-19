@@ -1,4 +1,4 @@
-# Amelie Portfolio Website
+# Amélie Portfolio Website
 
 Custom portfolio website built as a front-end development case study using Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 

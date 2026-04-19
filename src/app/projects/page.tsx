@@ -22,9 +22,9 @@ export default function ProjectsPage() {
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
             <p className="mt-8 max-w-3xl text-[1.14rem] leading-8 text-white">
-              I help brands, artists, and story-led teams build motion pieces
-              that feel elegant, emotionally clear, and cohesive across edit,
-              sound, and design.
+              A selection of work across editing, film, and visual
+              storytelling, exploring different formats and styles through a
+              range of projects.
             </p>
           </Reveal>
 
