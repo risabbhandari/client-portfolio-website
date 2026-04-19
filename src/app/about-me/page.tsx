@@ -33,12 +33,12 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-  { label: "Film Editing", icon: "film-editing" },
-  { label: "Video Editing", icon: "video-editing" },
-  { label: "Post-Production", icon: "post-production" },
   { label: "Adobe Premiere Pro", icon: "premiere" },
   { label: "DaVinci Resolve", icon: "davinci" },
   { label: "Adobe Photoshop", icon: "photoshop" },
+  { label: "Film Editing", icon: "film-editing" },
+  { label: "Video Editing", icon: "video-editing" },
+  { label: "Post-Production", icon: "post-production" },
   { label: "Content Creation", icon: "content-creation" },
   { label: "Visual Storytelling", icon: "visual-storytelling" },
   { label: "Attention to Detail", icon: "attention-to-detail" },

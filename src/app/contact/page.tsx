@@ -2,11 +2,75 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Reveal } from "@/components/ui/reveal";
-import { collaborationNotes, contactLinks } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact"
 };
+
+type ContactMethod = {
+  href: string;
+  icon: "email" | "linkedin";
+  label: string;
+  value: string;
+};
+
+const contactMethods: ContactMethod[] = [
+  {
+    href: "mailto:amelievillena@webster.edu",
+    icon: "email",
+    label: "Email",
+    value: "amelievillena@webster.edu"
+  },
+  {
+    href: "https://www.linkedin.com/in/ameliecreates/",
+    icon: "linkedin",
+    label: "LinkedIn",
+    value: "linkedin.com/in/ameliecreates"
+  }
+];
+
+function ContactIcon({ icon }: Pick<ContactMethod, "icon">) {
+  if (icon === "linkedin") {
+    return (
+      <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#89c7ff]/28 bg-[linear-gradient(180deg,rgba(7,66,128,0.98),rgba(8,116,194,0.98))] text-white shadow-[0_14px_35px_rgba(7,66,128,0.28)]">
+        <svg
+          aria-hidden="true"
+          className="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <rect height="18" rx="3.5" stroke="currentColor" strokeWidth="1.8" width="18" x="3" y="3" />
+          <circle cx="8" cy="9" fill="currentColor" r="1.2" />
+          <path
+            d="M7.9 11.2v5.1M11.3 11.2v5.1m0-2.8c0-1.7.9-2.5 2.2-2.5 1.2 0 2 .8 2 2.4v2.9"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.8"
+          />
+        </svg>
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d2dbeb]/18 bg-[rgba(210,219,235,0.08)] text-[#eef4fa]">
+      <svg
+        aria-hidden="true"
+        className="h-7 w-7"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+        viewBox="0 0 24 24"
+      >
+        <rect height="14" rx="2.5" width="18" x="3" y="5" />
+        <path d="m4.5 7 7.5 6 7.5-6" />
+      </svg>
+    </span>
+  );
+}
 
 export default function ContactPage() {
   return (
@@ -24,90 +88,40 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ced8e4]">
-              I&apos;m open to thoughtful collaborations across editing,
-              narrative work, short films, sound design, and supporting visual
-              assets.
-            </p>
+            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-[#ced8e4]">
+              <p>
+                I am always open to new opportunities and collaborations.
+                Whether you have a project in mind, want to discuss potential
+                partnerships, or just want to say hello, feel free to reach
+                out!
+              </p>
+              <p>The best way to reach me is by email or LinkedIn.</p>
+            </div>
           </Reveal>
 
-          <div className="mt-20 grid gap-10 lg:grid-cols-[0.42fr_0.58fr]">
-            <Reveal amount={0.18} distance={28}>
-              <div className="blue-panel blue-panel-muted h-full px-8 py-10">
-                <span className="eyebrow">.reach out</span>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.06} amount={0.18} distance={32}>
-              <div className="blue-panel blue-panel-frost px-8 py-10">
-                <h2 className="max-w-4xl font-serif text-4xl leading-[1] text-mist sm:text-5xl lg:text-[3.7rem]">
-                  Best reached by email, with socials close behind.
-                </h2>
-                <div className="mt-10 space-y-4">
-                  {contactLinks.map((link, index) => (
-                    <Link
-                      className="blue-list-card flex items-center justify-between gap-6 px-6 py-5 transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-[#d2dbeb]/24"
-                      href={link.href}
-                      key={link.label}
-                      rel="noreferrer"
-                      style={{
-                        background:
-                          index % 2 === 0
-                            ? "linear-gradient(145deg, rgba(1, 22, 43, 0.82), rgba(0, 56, 90, 0.74))"
-                            : "linear-gradient(145deg, rgba(106, 144, 180, 0.2), rgba(1, 22, 43, 0.74))"
-                      }}
-                      target={link.href.startsWith("http") ? "_blank" : undefined}
-                    >
-                      <span className="text-xs uppercase tracking-[0.3em] text-[#94a2bf]">
-                        {link.label}
-                      </span>
-                      <span className="text-base text-[#eef4fa] sm:text-lg">
-                        {link.value}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-8">
-                  <Link className="primary-button" href="mailto:amelievillena@webster.edu">
-                    Email Amelie
-                  </Link>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          <div className="section-divider mt-24 grid gap-10 lg:grid-cols-[0.42fr_0.58fr]">
-            <Reveal amount={0.18} distance={28}>
-              <div className="blue-panel blue-panel-surface h-full px-8 py-10">
-                <span className="eyebrow">.working together</span>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.06} amount={0.18} distance={32}>
-              <div className="blue-panel blue-panel-deep px-8 py-10">
-                <h2 className="font-serif text-4xl leading-[1] text-mist sm:text-5xl lg:text-[3.7rem]">
-                  Calm communication, clear direction, polished delivery.
-                </h2>
-
-                <div className="mt-8 space-y-4">
-                  {collaborationNotes.map((note, index) => (
-                    <div
-                      className="blue-list-card px-6 py-5"
-                      key={note}
-                      style={{
-                        background:
-                          index === 1
-                            ? "linear-gradient(145deg, rgba(148, 162, 191, 0.26), rgba(1, 22, 43, 0.76))"
-                            : "linear-gradient(145deg, rgba(0, 56, 90, 0.62), rgba(1, 22, 43, 0.72))"
-                      }}
-                    >
-                      <p className="relative text-base leading-8 text-[#d2dbeb]">{note}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal delay={0.14} amount={0.2} distance={34}>
+            <div className="mt-16 grid max-w-4xl gap-4 sm:grid-cols-2">
+              {contactMethods.map((method) => (
+                <Link
+                  className="flex items-center gap-5 rounded-[30px] border border-[#d2dbeb]/24 bg-[linear-gradient(145deg,rgba(210,219,235,0.24),rgba(148,162,191,0.14))] px-6 py-6 shadow-[0_20px_55px_rgba(1,22,43,0.14)] backdrop-blur-xl transition duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-[#eef4fa]/34 hover:bg-[linear-gradient(145deg,rgba(210,219,235,0.3),rgba(148,162,191,0.18))]"
+                  href={method.href}
+                  key={method.label}
+                  rel="noreferrer"
+                  target={method.href.startsWith("http") ? "_blank" : undefined}
+                >
+                  <ContactIcon icon={method.icon} />
+                  <div>
+                    <p className="text-[0.72rem] uppercase tracking-[0.3em] text-[#d8e2ee]">
+                      {method.label}
+                    </p>
+                    <p className="mt-2 text-base text-[#f5f9fc] sm:text-lg">
+                      {method.value}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
