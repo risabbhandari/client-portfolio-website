@@ -108,14 +108,14 @@ function ProjectCover({ item }: ProjectCoverProps) {
   const primaryWork = featured[0];
 
   return (
-    <div className="relative overflow-hidden rounded-[32px] border border-[#d2dbeb]/16 bg-[rgba(1,22,43,0.64)] p-4 sm:p-5">
+    <div className="space-y-4">
       <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px] border border-[#d2dbeb]/18 bg-[rgba(1,22,43,0.86)]"
+        className="relative aspect-video overflow-hidden rounded-[24px]"
         title={`${item.title} featured video`}
         videoSource={primaryWork.videoSource}
       />
 
-      <div className="mt-4">
+      <div>
         <div>
           <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#d2dbeb]">
             {item.subtitle}
@@ -125,7 +125,6 @@ function ProjectCover({ item }: ProjectCoverProps) {
           </p>
         </div>
       </div>
-
     </div>
   );
 }
@@ -144,7 +143,7 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
       }}
     >
       <ProjectVideoEmbed
-        className="relative aspect-video overflow-hidden rounded-[24px] border border-[#d2dbeb]/18 bg-[rgba(1,22,43,0.86)]"
+        className="relative aspect-video overflow-hidden rounded-[24px]"
         title={`${work.title} video`}
         videoSource={work.videoSource}
       />
