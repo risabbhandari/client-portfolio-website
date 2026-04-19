@@ -69,7 +69,7 @@ export function ProjectCard({
         >
           {item.title}
         </h3>
-        <p className="mt-5 max-w-[32rem] text-[0.98rem] leading-8 text-[#d2dbeb]">
+        <p className="mt-5 max-w-[32rem] text-[1.04rem] leading-8 text-[#d2dbeb]">
           {item.description}
         </p>
       </div>

@@ -22,14 +22,15 @@ body {
   background-color: #d7e9ef;
   background-image:
     linear-gradient(180deg, rgba(235, 246, 249, 0.78), rgba(223, 239, 244, 0.82)),
-    url("/background-pic.webp");
+    url("/background-pic.jpg");
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(var(--color-abyss));
   font-family:
-    "Inter", "Manrope", "Segoe UI", system-ui, sans-serif;
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
 }
@@ -54,9 +55,14 @@ a {
   h3,
   h4 {
     font-family:
-      "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Baskerville",
-      "Times New Roman", serif;
+      var(--font-bropella), "Baskerville", "Iowan Old Style",
+      "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+    font-weight: 400;
     letter-spacing: -0.02em;
+  }
+
+  .font-serif {
+    font-weight: 400;
   }
 
   p {
@@ -106,7 +112,7 @@ a {
   }
 
   .primary-button {
-    @apply inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] transition duration-500 ease-out-expo hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition duration-500 ease-out-expo hover:-translate-y-0.5;
     background-color: #d2dbeb;
     border-color: rgba(1, 22, 43, 0.1);
     box-shadow: 0 16px 35px rgba(1, 22, 43, 0.08);
@@ -118,7 +124,7 @@ a {
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-medium uppercase tracking-[0.2em] transition duration-500 ease-out-expo hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition duration-500 ease-out-expo hover:-translate-y-0.5;
     background:
       linear-gradient(145deg, rgba(1, 22, 43, 0.92), rgba(106, 144, 180, 0.58));
     border-color: rgba(210, 219, 235, 0.28);
@@ -164,7 +170,7 @@ a {
   }
 
   .nav-link {
-    @apply rounded-full px-4 py-2 text-sm uppercase tracking-[0.18em] transition duration-500 ease-out-expo;
+    @apply rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition duration-500 ease-out-expo;
     color: #36506d;
   }
 
@@ -180,7 +186,7 @@ a {
   }
 
   .nav-cta {
-    @apply inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm uppercase tracking-[0.18em] transition duration-500 ease-out-expo;
+    @apply inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition duration-500 ease-out-expo;
     background-color: rgba(255, 255, 255, 0.8);
     border-color: rgba(1, 22, 43, 0.12);
     color: #01162b;

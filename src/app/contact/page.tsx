@@ -84,14 +84,14 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-white">
-              <p>
+            <div className="mt-8 max-w-3xl space-y-4 text-[1.14rem] leading-8 text-white">
+              <p className="text-white">
                 I am always open to new opportunities and collaborations.
                 Whether you have a project in mind, want to discuss potential
                 partnerships, or just want to say hello, feel free to reach
                 out!
               </p>
-              <p>The best way to reach me is by email or LinkedIn.</p>
+              <p className="text-white">The best way to reach me is by email or LinkedIn.</p>
             </div>
           </Reveal>
 
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     <p className="text-[0.82rem] text-white/88">
                       {method.label}
                     </p>
-                    <p className="mt-2 text-base text-white sm:text-lg">
+                    <p className="mt-2 text-[1.06rem] text-white sm:text-[1.14rem]">
                       {method.value}
                     </p>
                   </div>

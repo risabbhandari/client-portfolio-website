@@ -273,7 +273,7 @@ export const heroHighlights = [
 ];
 
 export const heroLines = [
-  "editing, motion, and sound for",
+  "I do editing, motion, and sound for",
   "brands, campaigns, and",
   "story-led visuals"
 ];

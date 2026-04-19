@@ -18,23 +18,22 @@ export function HomeStackedShowcase() {
       <section className="layout-shell pt-8 sm:pt-12 lg:hidden">
         <div className="blue-panel blue-panel-deep flex min-h-[72svh] flex-col justify-between px-6 py-8 sm:px-8 sm:py-10">
           <Reveal amount={0.24} distance={36}>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-              <span className="text-mist">Hey, I&apos;m Amelie</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="font-serif text-[1.45rem] leading-none text-mist sm:text-[1.9rem]">
+                Hey, I&apos;m Amelie
+              </span>
             </div>
           </Reveal>
 
           <Reveal delay={0.06} amount={0.24} distance={42}>
             <div className="mt-10 space-y-2">
-              <p className="text-[0.92rem] uppercase tracking-[0.3em] text-[#94a2bf]">
-                Creative Portfolio
-              </p>
-              <h1 className="max-w-4xl text-balance font-serif text-5xl leading-[0.9] text-mist sm:text-6xl">
+              <h1 className="max-w-4xl text-balance font-sans text-5xl font-semibold leading-[0.92] tracking-[-0.05em] text-mist sm:text-6xl">
                 {heroLines[0]}
               </h1>
-              <p className="font-serif text-4xl leading-[0.94] text-[#eef3f8] sm:text-5xl">
+              <p className="font-sans text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-[#eef3f8] sm:text-5xl">
                 {heroLines[1]}
               </p>
-              <p className="font-serif text-4xl leading-[0.94] text-[#c8d4e2] sm:text-5xl">
+              <p className="font-sans text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-[#c8d4e2] sm:text-5xl">
                 {heroLines[2]}
               </p>
             </div>
@@ -52,7 +51,7 @@ export function HomeStackedShowcase() {
         <div className="mt-24">
           <Reveal amount={0.18} distance={30}>
             <div className="blue-panel blue-panel-mist px-6 py-8 sm:px-8 sm:py-10">
-              <p className="max-w-4xl font-serif text-3xl leading-[1.08] text-mist sm:text-4xl">
+              <p className="max-w-4xl font-sans text-3xl font-semibold leading-[1.06] tracking-[-0.05em] text-mist sm:text-4xl">
                 {aboutPhilosophy}
               </p>
               <div className="mt-10">
@@ -66,7 +65,7 @@ export function HomeStackedShowcase() {
 
         <Reveal delay={0.14} amount={0.18} distance={28}>
           <div className="blue-panel blue-panel-surface mt-24 px-6 py-8 sm:px-8 sm:py-10">
-            <h2 className="max-w-3xl font-serif text-4xl leading-[1] text-mist sm:text-5xl">
+            <h2 className="max-w-3xl font-sans text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-mist sm:text-5xl">
               I&apos;m open for freelance projects. Feel free to email me to see
               how we can collaborate.
             </h2>
@@ -90,23 +89,22 @@ export function HomeStackedShowcase() {
             <div className="blue-panel blue-panel-deep flex min-h-[calc(100svh-7.25rem)] max-w-[72rem] flex-col justify-between px-8 py-10 xl:px-10 xl:py-12">
               <div>
                 <Reveal amount={0.3} distance={32}>
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-                    <span className="text-mist">Hey, I&apos;m Amelie</span>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="font-serif text-[1.7rem] leading-none text-mist xl:text-[2.15rem]">
+                      Hey, I&apos;m Amelie
+                    </span>
                   </div>
                 </Reveal>
 
                 <Reveal delay={0.06} amount={0.3} distance={40}>
                   <div className="mt-10 max-w-6xl space-y-3">
-                    <p className="text-[0.94rem] uppercase tracking-[0.32em] text-[#94a2bf]">
-                      Creative Portfolio
-                    </p>
-                    <h1 className="max-w-6xl text-balance font-serif text-[5.7rem] leading-[0.9] text-mist xl:text-[6.8rem]">
+                    <h1 className="max-w-6xl text-balance font-sans text-[5.7rem] font-semibold leading-[0.92] tracking-[-0.06em] text-mist xl:text-[6.8rem]">
                       {heroLines[0]}
                     </h1>
-                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#eef3f8] xl:text-[5.55rem]">
+                    <p className="font-sans text-[4.85rem] font-semibold leading-[0.94] tracking-[-0.06em] text-[#eef3f8] xl:text-[5.55rem]">
                       {heroLines[1]}
                     </p>
-                    <p className="font-serif text-[4.85rem] leading-[0.92] text-[#c8d4e2] xl:text-[5.55rem]">
+                    <p className="font-sans text-[4.85rem] font-semibold leading-[0.94] tracking-[-0.06em] text-[#c8d4e2] xl:text-[5.55rem]">
                       {heroLines[2]}
                     </p>
                   </div>
@@ -122,7 +120,7 @@ export function HomeStackedShowcase() {
           <div>
             <Reveal delay={0.06} amount={0.18} distance={36}>
               <div className="blue-panel blue-panel-frost px-8 py-10">
-                <p className="max-w-4xl font-serif text-[2.45rem] leading-[1.05] text-mist xl:text-[3.2rem]">
+                <p className="max-w-4xl font-sans text-[2.45rem] font-semibold leading-[1.03] tracking-[-0.05em] text-mist xl:text-[3.2rem]">
                   {aboutPhilosophy}
                 </p>
                 <div className="mt-10">
@@ -137,7 +135,7 @@ export function HomeStackedShowcase() {
           <Reveal delay={0.14} amount={0.18} distance={34}>
             <div className="blue-panel blue-panel-surface mt-28 px-8 py-10 xl:px-10 xl:py-12">
               <div>
-                <h2 className="max-w-4xl font-serif text-5xl leading-[0.98] text-mist xl:text-[5.8rem]">
+                <h2 className="max-w-4xl font-sans text-5xl font-semibold leading-[1] tracking-[-0.06em] text-mist xl:text-[5.8rem]">
                   I&apos;m open for freelance projects. Feel free to email me to
                   see how we can collaborate.
                 </h2>

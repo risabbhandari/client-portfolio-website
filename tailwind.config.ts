@@ -15,12 +15,13 @@ const config: Config = {
         accent: "rgb(var(--color-accent) / <alpha-value>)"
       },
       fontFamily: {
-        sans: ['"Inter"', '"Manrope"', '"Segoe UI"', "system-ui", "sans-serif"],
+        sans: ['"Helvetica Neue"', '"Helvetica"', '"Arial"', "sans-serif"],
         serif: [
+          "var(--font-bropella)",
+          '"Baskerville"',
           '"Iowan Old Style"',
           '"Palatino Linotype"',
           '"Book Antiqua"',
-          '"Baskerville"',
           '"Times New Roman"',
           "serif"
         ]
@@ -43,4 +44,3 @@ const config: Config = {
 };
 
 export default config;
-

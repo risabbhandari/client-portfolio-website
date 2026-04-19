@@ -9,24 +9,23 @@ export function Hero() {
       <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr]">
         <div>
           <Reveal>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[#c3d6e8]">
-              <span className="text-mist">Hey, I&apos;m Amelie</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="font-serif text-[1.7rem] leading-none text-mist sm:text-[1.95rem]">
+                Hey, I&apos;m Amelie
+              </span>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
             <div className="mt-8 space-y-3 sm:space-y-4">
-              <p className="max-w-2xl text-[1rem] uppercase tracking-[0.32em] text-[#94a2bf]">
-                creative portfolio
-              </p>
-              <h1 className="max-w-5xl text-balance font-serif text-6xl leading-[0.92] text-mist sm:text-7xl lg:text-[6.4rem]">
+              <h1 className="max-w-5xl text-balance font-sans text-6xl font-semibold leading-[0.92] tracking-[-0.05em] text-mist sm:text-7xl lg:text-[6.4rem]">
                 {heroLines[0]}
               </h1>
               <div className="space-y-1">
-                <p className="font-serif text-5xl leading-[0.94] text-[#eef3f8]/96 sm:text-6xl lg:text-[5.3rem]">
+                <p className="font-sans text-5xl font-semibold leading-[0.96] tracking-[-0.05em] text-[#eef3f8]/96 sm:text-6xl lg:text-[5.3rem]">
                   {heroLines[1]}
                 </p>
-                <p className="font-serif text-5xl leading-[0.94] text-[#c8d4e2] sm:text-6xl lg:text-[5.3rem]">
+                <p className="font-sans text-5xl font-semibold leading-[0.96] tracking-[-0.05em] text-[#c8d4e2] sm:text-6xl lg:text-[5.3rem]">
                   {heroLines[2]}
                 </p>
               </div>
@@ -88,7 +87,7 @@ export function Hero() {
                   <h2 className="mt-10 max-w-sm font-serif text-4xl leading-[0.98] text-mist">
                     {card.title}
                   </h2>
-                  <p className="mt-4 max-w-sm text-base leading-8 text-[#d2dbeb]">
+                  <p className="mt-4 max-w-sm text-[1.06rem] leading-8 text-[#d2dbeb]">
                     {card.detail}
                   </p>
                 </div>

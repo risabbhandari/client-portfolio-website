@@ -208,7 +208,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ced8e4]">
+            <p className="mt-8 max-w-3xl text-[1.14rem] leading-8 text-[#ced8e4]">
               Film, television, and video production student focused on editing,
               post-production, and visual storytelling.
             </p>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                     fill
                     priority
                     sizes="(min-width: 1024px) 40vw, 100vw"
-                    src="/background-pic.webp"
+                    src="/background-pic.jpg"
                   />
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function AboutPage() {
                 <div className="space-y-6">
                   {aboutDescription.map((paragraph) => (
                     <p
-                      className="text-base leading-8 text-[#eef4fa] sm:text-lg"
+                      className="text-[1.06rem] leading-8 text-[#eef4fa] sm:text-[1.14rem]"
                       key={paragraph}
                     >
                       {paragraph}

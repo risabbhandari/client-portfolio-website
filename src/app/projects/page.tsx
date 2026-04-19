@@ -21,7 +21,7 @@ export default function ProjectsPage() {
           </Reveal>
 
           <Reveal delay={0.1} amount={0.28} distance={34}>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-white">
+            <p className="mt-8 max-w-3xl text-[1.14rem] leading-8 text-white">
               I help brands, artists, and story-led teams build motion pieces
               that feel elegant, emotionally clear, and cohesive across edit,
               sound, and design.
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           <Reveal delay={0.18} amount={0.22} distance={34}>
             <div className="blue-panel blue-panel-frost mt-28 px-8 py-10 xl:px-10 xl:py-12">
               <div>
-                <h2 className="max-w-4xl font-serif text-4xl leading-[1] text-mist sm:text-5xl lg:text-[3.6rem]">
+                <h2 className="max-w-4xl font-sans text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-mist sm:text-5xl lg:text-[3.6rem]">
                   I&apos;m open for freelance projects. Feel free to email me to
                   see how we can collaborate.
                 </h2>

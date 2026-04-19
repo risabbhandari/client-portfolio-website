@@ -81,7 +81,7 @@ export function NitroProjectCard({
       <div
         className={`grid gap-6 ${
           isHome ? "mt-8 lg:grid-cols-[1.05fr_0.95fr]" : "mt-6 lg:grid-cols-[1.05fr_0.95fr]"
-        } lg:items-end`}
+        } lg:items-center`}
       >
         <div>
           <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#94a2bf]">
@@ -99,7 +99,7 @@ export function NitroProjectCard({
         </div>
 
         <div>
-          <p className="max-w-xl text-[1rem] leading-8 text-[#d2dbeb]">
+          <p className="max-w-xl text-[1.06rem] leading-8 text-[#d2dbeb]">
             {item.description}
           </p>
         </div>

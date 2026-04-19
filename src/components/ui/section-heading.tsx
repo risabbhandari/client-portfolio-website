@@ -32,7 +32,7 @@ export function SectionHeading({
         <TitleTag className="mt-7 text-balance text-5xl leading-[0.94] text-mist sm:text-6xl lg:text-[5.2rem]">
           {title}
         </TitleTag>
-        <p className="mt-6 max-w-2xl text-base leading-8 text-[#6b83a0] sm:text-lg">
+        <p className="mt-6 max-w-2xl text-[1.06rem] leading-8 text-[#6b83a0] sm:text-[1.14rem]">
           {description}
         </p>
       </div>

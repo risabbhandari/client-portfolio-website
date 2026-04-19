@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 
 import { Footer } from "@/components/footer";
 import { PageTransition } from "@/components/layout/page-transition";
 import { Navbar } from "@/components/navigation/navbar";
 
 import "./globals.css";
+
+const bropella = localFont({
+  src: "./fonts/Bropella.woff2",
+  variable: "--font-bropella",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className={bropella.variable} lang="en">
       <body>
         <div className="relative flex min-h-screen flex-col">
           <Navbar />
@@ -34,4 +41,3 @@ export default function RootLayout({
     </html>
   );
 }
-

@@ -152,7 +152,7 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
         <h3 className="font-serif text-3xl leading-[0.95] text-[#f1f7ff]">
           {work.title}
         </h3>
-        <p className="mt-4 text-base leading-8 text-[#d2dbeb]">{work.note}</p>
+        <p className="mt-4 text-[1.06rem] leading-8 text-[#d2dbeb]">{work.note}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {work.deliverables.map((deliverable) => (
@@ -213,7 +213,7 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 type="button"
               >
-                <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+                <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
                   <div>
                     <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#94a2bf]">
                       {String(index + 1).padStart(2, "0")}
@@ -223,8 +223,8 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                     </h2>
                   </div>
 
-                  <div className="flex items-end justify-between gap-4">
-                    <p className="max-w-xl text-[1rem] leading-8 text-[#d2dbeb]">
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="max-w-xl text-[1.06rem] leading-8 text-[#d2dbeb]">
                       {item.description}
                     </p>
                     <motion.span
