@@ -216,15 +216,15 @@ export default function AboutPage() {
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[0.44fr_0.56fr] lg:items-start">
             <Reveal amount={0.18} distance={28}>
-              <div className="blue-panel blue-panel-surface overflow-hidden p-3 sm:p-4">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[28px]">
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative aspect-square w-full max-w-[24rem] overflow-hidden rounded-full border border-[#d2dbeb]/18 bg-[rgba(255,255,255,0.08)] shadow-[0_24px_80px_rgba(1,22,43,0.26)]">
                   <Image
-                    alt="Portfolio visual"
+                    alt="Portrait of Amelie"
                     className="object-cover"
                     fill
                     priority
-                    sizes="(min-width: 1024px) 40vw, 100vw"
-                    src="/background-pic.jpg"
+                    sizes="(min-width: 1024px) 24rem, 80vw"
+                    src="/images/pp.jpg"
                   />
                 </div>
               </div>

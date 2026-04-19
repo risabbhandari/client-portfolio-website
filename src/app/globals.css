@@ -22,7 +22,7 @@ body {
   background-color: #d7e9ef;
   background-image:
     linear-gradient(180deg, rgba(235, 246, 249, 0.78), rgba(223, 239, 244, 0.82)),
-    url("/background-pic.jpg");
+    url("/images/background pic.jpg");
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;

@@ -1,4 +1,6 @@
 export type ProjectCategory = {
+  cardImage: string;
+  sectionId: string;
   title: string;
   subtitle: string;
   description: string;
@@ -30,6 +32,8 @@ export const navigationItems = [
 
 export const projectCategories: ProjectCategory[] = [
   {
+    cardImage: "/images/shortformcontent.png",
+    sectionId: "short-form-content",
     title: "Short-Form Content",
     subtitle: "Reels, TikTok, Shorts",
     description:
@@ -76,6 +80,8 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
+    cardImage: "/images/videoediting.jpg",
+    sectionId: "video-editing",
     title: "Video Editing",
     subtitle: "Long-form / Narrative Edits",
     description:
@@ -152,6 +158,8 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
+    cardImage: "/images/shortfilms.webp",
+    sectionId: "short-films",
     title: "Short Films",
     subtitle: "Cinematic Storytelling",
     description:
@@ -198,6 +206,8 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
+    cardImage: "/images/audioproduction.webp",
+    sectionId: "audio-production",
     title: "Audio Production",
     subtitle: "Sound Design & Mixing",
     description:
@@ -235,6 +245,8 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
+    cardImage: "/images/graphicdesign.jpeg",
+    sectionId: "graphic-design",
     title: "Graphic Design",
     subtitle: "Visual Identity & Assets",
     description:

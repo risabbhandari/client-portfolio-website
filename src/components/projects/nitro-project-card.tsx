@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import { ProjectCategory } from "@/data/site";
 
 type NitroProjectCardProps = {
@@ -46,36 +49,55 @@ export function NitroProjectCard({
         }`}
         style={{ backgroundImage: item.visual.base }}
       >
-        <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(1,22,43,0.08),rgba(1,22,43,0.52))]" />
-        <div
-          className="pointer-events-none absolute inset-x-[14%] top-8 h-32 rounded-full blur-3xl"
-          style={{ backgroundColor: item.visual.glow }}
-        />
-
-        <div className="relative flex h-full flex-col justify-between p-6 lg:p-8">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-[0.72rem] uppercase tracking-[0.34em] text-[#eef4fa]">
-                {item.year}
-              </p>
-              <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[#cad6e2]">
-                {item.category}
-              </p>
-            </div>
-
-            <span className="rounded-full border border-[#d2dbeb]/22 bg-[rgba(255,255,255,0.08)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eef4fa]">
-              {item.subtitle}
-            </span>
-          </div>
-
-          <div className="flex items-end justify-between gap-4">
-            <div className="h-px flex-1 bg-[#d2dbeb]/18" />
-            <div
-              className="h-2.5 w-2.5 rounded-full"
-              style={{ backgroundColor: item.visual.accent }}
+        {isHome ? (
+          <Link
+            aria-label={`Open ${item.title} in Projects`}
+            className="absolute inset-0 block transition duration-300 hover:scale-[1.01]"
+            href={`/projects#${item.sectionId}`}
+          >
+            <Image
+              alt={`${item.title} preview`}
+              className="object-cover"
+              fill
+              priority={index === 0}
+              sizes="(min-width: 1024px) 72vw, 100vw"
+              src={item.cardImage}
             />
-          </div>
-        </div>
+          </Link>
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(1,22,43,0.08),rgba(1,22,43,0.52))]" />
+            <div
+              className="pointer-events-none absolute inset-x-[14%] top-8 h-32 rounded-full blur-3xl"
+              style={{ backgroundColor: item.visual.glow }}
+            />
+
+            <div className="relative flex h-full flex-col justify-between p-6 lg:p-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[0.72rem] uppercase tracking-[0.34em] text-[#eef4fa]">
+                    {item.year}
+                  </p>
+                  <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[#cad6e2]">
+                    {item.category}
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#d2dbeb]/22 bg-[rgba(255,255,255,0.08)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eef4fa]">
+                  {item.subtitle}
+                </span>
+              </div>
+
+              <div className="flex items-end justify-between gap-4">
+                <div className="h-px flex-1 bg-[#d2dbeb]/18" />
+                <div
+                  className="h-2.5 w-2.5 rounded-full"
+                  style={{ backgroundColor: item.visual.accent }}
+                />
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       <div

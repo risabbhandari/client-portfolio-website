@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import type { ProjectCategory } from "@/data/site";
 
@@ -11,6 +11,7 @@ type ExpandableProjectListProps = {
 
 type ProjectVideoEmbedProps = {
   className?: string;
+  deferMountMs?: number;
   title: string;
   videoSource: string;
 };
@@ -81,20 +82,52 @@ function getProjectVideoEmbedUrl(videoSource: string) {
 
 function ProjectVideoEmbed({
   className,
+  deferMountMs = 0,
   title,
   videoSource
 }: ProjectVideoEmbedProps) {
+  const [isReady, setIsReady] = useState(deferMountMs === 0);
+
+  useEffect(() => {
+    if (deferMountMs === 0) {
+      setIsReady(true);
+      return;
+    }
+
+    setIsReady(false);
+
+    const timeout = window.setTimeout(() => {
+      setIsReady(true);
+    }, deferMountMs);
+
+    return () => {
+      window.clearTimeout(timeout);
+    };
+  }, [deferMountMs, videoSource]);
+
   return (
     <div className={className}>
-      <iframe
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="absolute inset-0 h-full w-full"
-        loading="lazy"
-        referrerPolicy="strict-origin-when-cross-origin"
-        src={getProjectVideoEmbedUrl(videoSource)}
-        title={title}
-      />
+      {isReady ? (
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full"
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          src={getProjectVideoEmbedUrl(videoSource)}
+          title={title}
+        />
+      ) : (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(145deg,rgba(1,22,43,0.94),rgba(0,56,90,0.82))]"
+        >
+          <div className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_24%_18%,rgba(210,219,235,0.14),transparent_20%),linear-gradient(150deg,rgba(255,255,255,0.06),rgba(1,22,43,0)_30%)]" />
+          <div className="absolute bottom-4 left-4 rounded-full border border-[#d2dbeb]/18 bg-[rgba(1,22,43,0.56)] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-[#eef4fa]">
+            Loading Preview
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -144,6 +177,7 @@ function ExpandedWorkCard({ work }: ExpandedWorkCardProps) {
     >
       <ProjectVideoEmbed
         className="relative aspect-video overflow-hidden rounded-[24px]"
+        deferMountMs={260}
         title={`${work.title} video`}
         videoSource={work.videoSource}
       />
@@ -186,6 +220,29 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
     "radial-gradient(circle at 18% 16%, rgba(210, 219, 235, 0.14), transparent 18%), linear-gradient(150deg, rgba(210, 219, 235, 0.08), rgba(1, 22, 43, 0) 30%)"
   ];
 
+  useEffect(() => {
+    const syncOpenSectionWithHash = () => {
+      const hash = window.location.hash.replace(/^#/, "");
+
+      if (!hash) {
+        return;
+      }
+
+      const matchingIndex = items.findIndex((item) => item.sectionId === hash);
+
+      if (matchingIndex !== -1) {
+        setOpenIndex(matchingIndex);
+      }
+    };
+
+    syncOpenSectionWithHash();
+    window.addEventListener("hashchange", syncOpenSectionWithHash);
+
+    return () => {
+      window.removeEventListener("hashchange", syncOpenSectionWithHash);
+    };
+  }, [items]);
+
   return (
     <div className="space-y-6">
       {items.map((item, index) => {
@@ -194,11 +251,11 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
         return (
           <motion.section
             animate={{ borderColor: isOpen ? "rgba(210,219,235,0.22)" : "rgba(148,162,191,0.16)" }}
-            className="relative overflow-hidden rounded-[40px] border border-[#94a2bf]/16 p-5 shadow-[0_28px_90px_rgba(1,22,43,0.22)] sm:p-6 lg:p-8"
+            className="relative scroll-mt-32 overflow-hidden rounded-[40px] border border-[#94a2bf]/16 p-5 shadow-[0_28px_90px_rgba(1,22,43,0.22)] sm:p-6 lg:p-8"
+            id={item.sectionId}
             key={item.title}
-            layout
             style={{ background: accordionBackgrounds[index % accordionBackgrounds.length] }}
-            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
           >
             <div
               className="pointer-events-none absolute inset-0"
@@ -227,13 +284,18 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
                     <p className="max-w-xl text-[1.06rem] leading-8 text-[#d2dbeb]">
                       {item.description}
                     </p>
-                    <motion.span
-                      animate={{ rotate: isOpen ? 45 : 0 }}
-                      className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-[#d2dbeb]/18 bg-[rgba(255,255,255,0.08)] text-2xl text-[#eef4fa]"
-                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    <span
+                      className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full border border-[#d2dbeb]/18 bg-[rgba(255,255,255,0.08)]"
                     >
-                      +
-                    </motion.span>
+                      <motion.span
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                        className="inline-flex items-center justify-center text-[1.7rem] leading-none text-[#eef4fa]"
+                        style={{ transformOrigin: "50% 50%" }}
+                        transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        +
+                      </motion.span>
+                    </span>
                   </div>
                 </div>
               </button>
@@ -242,11 +304,16 @@ export function ExpandableProjectList({ items }: ExpandableProjectListProps) {
             <AnimatePresence initial={false}>
               {isOpen ? (
                 <motion.div
-                  animate={{ height: "auto", opacity: 1 }}
+                  animate={{ height: "auto", opacity: 1, y: 0 }}
                   className="overflow-hidden"
-                  exit={{ height: 0, opacity: 0 }}
-                  initial={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  exit={{ height: 0, opacity: 0, y: -10 }}
+                  initial={{ height: 0, opacity: 0, y: 10 }}
+                  style={{ willChange: "height, opacity, transform" }}
+                  transition={{
+                    height: { duration: 0.38, ease: [0.16, 1, 0.3, 1] },
+                    opacity: { duration: 0.24, delay: 0.08, ease: [0.22, 1, 0.36, 1] },
+                    y: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+                  }}
                 >
                   <div className="mt-8 border-t border-[#d2dbeb]/16 pt-8">
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
