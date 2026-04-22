@@ -25,7 +25,7 @@ const contactMethods: ContactMethod[] = [
     href: "https://www.linkedin.com/in/amelie-villena/",
     icon: "linkedin",
     label: "LinkedIn",
-    value: "https://www.linkedin.com/in/amelie-villena/"
+    value: "linkedin.com/in/amelie-villena"
   }
 ];
 

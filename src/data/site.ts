@@ -45,7 +45,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Launch reel", "Cutdowns", "Caption pack"],
         format: "Vertical campaign edits",
         note:
-          "A short promo edit highlighting the FTVP program through quick, student-focused moments.",
+          "A short promo edit shaped around an interview, highlighting the FTVP program through quick moments.",
         title: "School of Communications - FTVP Short",
         year: "2026",
         videoSource: "https://drive.google.com/file/d/1GXi2gRJ6I1-O1uRNbQV4A0jP7GP7xEDC/view"
@@ -65,7 +65,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Creator edit", "Story set", "Alt openings"],
         format: "Twitch Stream 2",
         note:
-          "A second Twitch short focused on tighter beats, clearer reactions, and snappier pacing.",
+          "A second Twitch short shaped around a conversation, balancing dialogue for clean pacing.",
         title: "Twitch Stream - Short 2",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1INcI2X_-NNVGbqJBCr7fPBrfTzMFZQYY/view"
@@ -93,7 +93,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Hero film edit", "Trailer", "YouTube version"],
         format: "Long-form brand storytelling",
         note:
-          "A comedy-focused edit built around timing, reaction beats, and clean transitions.",
+          "A comedy edit driven by rhythm and timing to keep the flow quick and engaging.",
         title: "Comedy - Edit",
         year: "2026",
         videoSource: "https://drive.google.com/file/d/1inoaIkX13yrJUDT3zxOU2zxiUMMUmUX2/view"
@@ -103,8 +103,8 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Episode edit", "Teaser cut", "Social trims"],
         format: "Narrative documentary edit",
         note:
-          "A dialogue-driven scene edit centered on pacing, performance rhythm, and conversational clarity.",
-        title: "Dialouge - Edit",
+          "A dialogue-focused edit built from selected footage, refined for continuity and smooth pacing.",
+        title: "Dialogue - Edit",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1G3KO9UhAruYCxRAOtw75A25niPVgKr_t/view?usp=drive_link"
       },
@@ -123,7 +123,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
         format: "Case study editorial",
         note:
-          "A comedic Doritos ad edit with punchy timing, product emphasis, and a clear branded payoff.",
+          "A comedy-style Doritos ad shaped by tight pacing and punchy timing.",
         title: "Doritos - Comedy Ad",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1kjsMTFN56BcHYsDuoJW_9e-xoOnZYYWq/view?usp=drive_link"
@@ -133,7 +133,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
         format: "Case study editorial",
         note:
-          "A polished FTVP program video featuring student work, campus moments, and academic storytelling.",
+          "A reformatted edit from the same footage as the short promo, highlighting FTVP through student work and storytelling.",
         title: "School of Communications - FTVP Video",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1dsyUNvjsm_G3RO9zELkb6w1ECIZISoha/view?usp=drive_link"
@@ -143,7 +143,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Case study film", "Interview cleanup", "Motion titles"],
         format: "Case study editorial",
         note:
-          "A dramatic scene edit designed to build tension, support performance, and keep the story clear.",
+          "A comedic edit on bullying shaped through timing, pacing, and layered SFX and music for stronger impact.",
         title: "The Bully - Edit",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1HAUq_Gb5-aDn7q5mSn9L13GZjyzKq-3D/view?usp=drive_link"
@@ -163,7 +163,7 @@ export const projectCategories: ProjectCategory[] = [
     title: "Short Films",
     subtitle: "Cinematic Storytelling",
     description:
-      "Short films that lean into atmosphere, restraint, and visual memory. Framing, motion, and sound are treated as one system.",
+      "Short films focused on storytelling and visual composition, shaped through pacing, sound, and image to convey mood, tone, and narrative with intention.",
     highlights: ["Mood-driven cuts", "Cinematic restraint", "Story-led sequencing"],
     works: [
       {
@@ -171,7 +171,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Festival cut", "Trailer", "Sound pass"],
         format: "Narrative short film",
         note:
-          "A narrative short centered on character energy, scene flow, and a polished cinematic finish.",
+          "A co-directed and edited collaboration with Conservatory students, recreating a scene from Booksmart (2019) with a focus on performance and timing.",
         title: "Booksmart",
         year: "2026",
         videoSource: "https://drive.google.com/file/d/1vqEkRXQR8SLPAn9aB_akrBUrODWHz1Mj/view?usp=drive_link"
@@ -181,8 +181,8 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Performance film", "Title sequence", "Master export"],
         format: "Poetic visual short",
         note:
-          "An in-class short exploring contrast in pace and mood through controlled editing and rhythm.",
-        title: "Rush or Relaxed ? - In-class project",
+          "A dual-perspective edit exploring time, contrasting urgency and calm, as assistant director of photography and editor.",
+        title: "Rush or relaxed?",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1IqUjq4DEfkY9Sm-02qN17HJLQUFBe5Fp/view?usp=drive_link"
       },
@@ -191,7 +191,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Director's cut", "Still pull set", "Screening version"],
         format: "Experimental short",
         note:
-          "A concept-driven short built around voice, atmosphere, and restrained visual storytelling.",
+          "A short film co-directed, shot, and edited, shaping both its creative direction and final cut.",
         title: "The Voice",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1orzjhh_9hm3wsjOHmzGgstJscFpYeJ9i/view?usp=drive_link"
@@ -211,7 +211,7 @@ export const projectCategories: ProjectCategory[] = [
     title: "Audio Production",
     subtitle: "Sound Design & Mixing",
     description:
-      "Sound beds, transitions, and mixes that deepen the world of the piece. The goal is subtle immersion, not overstated effect.",
+      "Audio production focused on sound design and clarity, shaped through layering, balance, and detail to support and enhance the visual narrative.",
     highlights: ["Clean mixes", "Spatial texture", "Intentional transitions"],
     works: [
       {
@@ -219,7 +219,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Sound design", "Mix", "Broadcast master"],
         format: "Brand soundscape package",
         note:
-          "A sound design piece built around layered raindrop effects, ambience, and natural spatial detail.",
+          "A sound design edit layering SFX and ambient audio to create an immersive, realistic atmosphere.",
         title: "Raindrop - SFX",
         year: "2026",
         videoSource: "https://drive.google.com/file/d/1W6q9WRdskHGCjmCtAtqJvrN_NInudtar/view?usp=drive_link"
@@ -229,7 +229,7 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Podcast mix", "Trailer audio", "Cleanup pass"],
         format: "Voice-led audio production",
         note:
-          "A cinematic SFX exercise focused on impact, machinery, and tension-building audio detail.",
+          "A trailer recreation built with full SFX and music to enhance impact and intensity.",
         title: "Terminator - SFX",
         year: "2025",
         videoSource: "https://drive.google.com/file/d/1Xx3M70RE9yScDyq7p0WQxd1REpX_vaV9/view?usp=drive_link"
@@ -250,7 +250,7 @@ export const projectCategories: ProjectCategory[] = [
     title: "Graphic Design",
     subtitle: "Visual Identity & Assets",
     description:
-      "Visual systems and design assets that support motion work with the same calm confidence. Useful, elevated, and consistent across touchpoints.",
+      "Graphic design focused on visual composition and clarity, shaped through layout, motion, and detail to communicate ideas and integrate naturally with video.",
     highlights: ["Identity support", "Campaign assets", "Refined layout systems"],
     works: [
       {
@@ -258,8 +258,8 @@ export const projectCategories: ProjectCategory[] = [
         deliverables: ["Title cards", "Social assets", "Campaign layouts"],
         format: "Motion support design",
         note:
-          "A motion tracking piece that locks title graphics into a New York City scene with clean integration.",
-        title: "Title NYC - Motion Tracking",
+          "A motion-tracked text edit built in Adobe After Effects, tracking text cleanly into NYC footage.",
+        title: "NYC – Motion Tracking",
         year: "2026",
         videoSource: "https://drive.google.com/file/d/1iVY1QS5zKD5ZXIDv7sFWZlfXztc-5BwZ/view?usp=drive_link"
       },
@@ -285,9 +285,8 @@ export const heroHighlights = [
 ];
 
 export const heroLines = [
-  "I do editing, motion, and sound for",
-  "brands, campaigns, and",
-  "story-led visuals"
+  "Where footage becomes",
+  "story."
 ];
 
 export const heroAsideCards = [
@@ -330,7 +329,7 @@ export const aboutStory =
   "Amélie is a multidisciplinary creative focused on editing, motion-led storytelling, sound, and visual identity. The practice is shaped by a love of cinematic pacing, clear structure, and work that feels polished without becoming cold.";
 
 export const aboutPhilosophy =
-  "The goal is to make every piece feel calm, intentional, and emotionally legible. Whether the format is a short reel or a short film, the process stays grounded in restraint, rhythm, and careful finishing.";
+  "Creating work that brings ideas to life through editing, motion, and sound, with a focus on clarity, rhythm, and building something shared, while always refining and pushing it further.";
 
 export const aboutFacts = [
   { label: ".discipline", value: "editing, sound, and design" },

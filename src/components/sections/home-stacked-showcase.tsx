@@ -16,11 +16,11 @@ export function HomeStackedShowcase() {
   return (
     <>
       <section className="layout-shell pt-8 sm:pt-12 lg:hidden">
-        <div className="blue-panel blue-panel-deep flex min-h-[72svh] flex-col justify-between px-6 py-8 sm:px-8 sm:py-10">
+          <div className="blue-panel blue-panel-deep flex min-h-[72svh] flex-col justify-center px-6 py-8 sm:px-8 sm:py-10">
           <Reveal amount={0.24} distance={36}>
             <div className="flex flex-wrap items-center gap-3">
               <span className="font-serif text-[1.45rem] leading-none text-mist sm:text-[1.9rem]">
-                Hey, I&apos;m Amélie
+                Amélie Villena
               </span>
             </div>
           </Reveal>
@@ -63,19 +63,6 @@ export function HomeStackedShowcase() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.14} amount={0.18} distance={28}>
-          <div className="blue-panel blue-panel-surface mt-24 px-6 py-8 sm:px-8 sm:py-10">
-            <h2 className="max-w-3xl font-sans text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-mist sm:text-5xl">
-              I&apos;m open for freelance projects. Feel free to email me to see
-              how we can collaborate.
-            </h2>
-            <div className="mt-8">
-              <Link className="secondary-button" href={contactLinks[0]?.href ?? "/contact"}>
-                Contact Me
-              </Link>
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       <section className="layout-shell hidden pt-12 lg:block">
@@ -86,12 +73,12 @@ export function HomeStackedShowcase() {
           mode="home"
           sceneHeightPerItem={132}
           overlay={
-            <div className="blue-panel blue-panel-deep flex min-h-[calc(100svh-7.25rem)] max-w-[72rem] flex-col justify-between px-8 py-10 xl:px-10 xl:py-12">
+              <div className="blue-panel blue-panel-deep flex min-h-[calc(100svh-7.25rem)] max-w-[72rem] flex-col justify-center px-8 py-10 xl:px-10 xl:py-12">
               <div>
                 <Reveal amount={0.3} distance={32}>
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="font-serif text-[1.7rem] leading-none text-mist xl:text-[2.15rem]">
-                      Hey, I&apos;m Amélie
+                      Amélie Villena
                     </span>
                   </div>
                 </Reveal>
@@ -132,24 +119,6 @@ export function HomeStackedShowcase() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.14} amount={0.18} distance={34}>
-            <div className="blue-panel blue-panel-surface mt-28 px-8 py-10 xl:px-10 xl:py-12">
-              <div>
-                <h2 className="max-w-4xl font-sans text-5xl font-semibold leading-[1] tracking-[-0.06em] text-mist xl:text-[5.8rem]">
-                  I&apos;m open for freelance projects. Feel free to email me to
-                  see how we can collaborate.
-                </h2>
-                <div className="mt-10">
-                  <Link
-                    className="secondary-button"
-                    href={contactLinks[0]?.href ?? "/contact"}
-                  >
-                    Contact Me
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
     </>

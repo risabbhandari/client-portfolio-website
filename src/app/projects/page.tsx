@@ -33,22 +33,6 @@ export default function ProjectsPage() {
               <ExpandableProjectList items={projectCategories} />
             </div>
           </div>
-
-          <Reveal delay={0.18} amount={0.22} distance={34}>
-            <div className="blue-panel blue-panel-frost mt-28 px-8 py-10 xl:px-10 xl:py-12">
-              <div>
-                <h2 className="max-w-4xl font-sans text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-mist sm:text-5xl lg:text-[3.6rem]">
-                  I&apos;m open for freelance projects. Feel free to email me to
-                  see how we can collaborate.
-                </h2>
-                <div className="mt-8">
-                  <Link className="secondary-button" href="/contact">
-                    Contact Me
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
