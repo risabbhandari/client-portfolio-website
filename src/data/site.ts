@@ -32,7 +32,7 @@ export const navigationItems = [
 
 export const projectCategories: ProjectCategory[] = [
   {
-    cardImage: "/images/shortformcontent.png",
+    cardImage: "/images/shortformcontent3.png",
     sectionId: "short-form-content",
     title: "Short-Form Content",
     subtitle: "Reels, TikTok, Shorts",
