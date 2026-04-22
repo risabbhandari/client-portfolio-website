@@ -158,7 +158,7 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
-    cardImage: "/images/shortfilm.jpg",
+    cardImage: "/images/shortfilms2.png",
     sectionId: "short-films",
     title: "Short Films",
     subtitle: "Cinematic Storytelling",
@@ -245,7 +245,7 @@ export const projectCategories: ProjectCategory[] = [
     }
   },
   {
-    cardImage: "/images/graphicdesign.jpeg",
+    cardImage: "/images/graphicdesign2.png",
     sectionId: "graphic-design",
     title: "Graphic Design",
     subtitle: "Visual Identity & Assets",
